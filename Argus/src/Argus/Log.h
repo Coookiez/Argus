@@ -34,4 +34,7 @@ namespace Argus {
 #define AS_INFO(...)		::Argus::Log::GetClientLogger()->info(__VA_ARGS__); 
 #define AS_WARN(...)		::Argus::Log::GetClientLogger()->warn(__VA_ARGS__); 
 #define AS_ERROR(...)		::Argus::Log::GetClientLogger()->error(__VA_ARGS__); 
-#define AS_FATAL(...)		::Argus::Log::GetClientLogger()->fatal(__VA_ARGS__); 
+#define AS_FATAL(...)		::Argus::Log::GetClientLogger()->fatal(__VA_ARGS__);
+
+// if dist build
+#define AS_CORE_INFO
