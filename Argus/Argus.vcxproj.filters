@@ -4,6 +4,9 @@
     <Filter Include="Argus">
       <UniqueIdentifier>{C781D70C-3396-FFBD-FC17-A31D68EBFBEE}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Argus\Events">
+      <UniqueIdentifier>{CB87DEF3-B7EA-6D98-6070-A64E4CB2391B}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Argus.h" />
@@ -16,9 +19,24 @@
     <ClInclude Include="src\Argus\EntryPoint.h">
       <Filter>Argus</Filter>
     </ClInclude>
+    <ClInclude Include="src\Argus\Events\ApplicationEvent.h">
+      <Filter>Argus\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Argus\Events\Event.h">
+      <Filter>Argus\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Argus\Events\KeyEvent.h">
+      <Filter>Argus\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Argus\Events\MouseEvent.h">
+      <Filter>Argus\Events</Filter>
+    </ClInclude>
     <ClInclude Include="src\Argus\Log.h">
       <Filter>Argus</Filter>
     </ClInclude>
+    <ClInclude Include="src\aspch.h" />
+    <ClInclude Include="src\Argus\Window.h" />
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Argus\Application.cpp">
@@ -27,5 +45,7 @@
     <ClCompile Include="src\Argus\Log.cpp">
       <Filter>Argus</Filter>
     </ClCompile>
+    <ClCompile Include="src\aspch.cpp" />
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
   </ItemGroup>
 </Project>

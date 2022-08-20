@@ -1,3 +1,6 @@
 [submodule "Argus/vendor/spdlog"]
 	path = Argus/vendor/spdlog
 	url = https://github.com/gabime/spdlog
+[submodule "Argus/vendor/GLFW"]
+	path = Argus/vendor/GLFW
+	url = https://github.com/TheCherno/GLFW
