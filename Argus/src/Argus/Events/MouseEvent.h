@@ -64,7 +64,7 @@ namespace Argus
 		int m_Button;
 	};
 
-	class ARGUS_API MouseButtonPressedEvent : public Event
+	class ARGUS_API MouseButtonPressedEvent : public MouseButtonEvent
 	{
 	public:
 		MouseButtonPressedEvent(int button)
@@ -77,10 +77,10 @@ namespace Argus
 			return ss.str();
 		}
 
-		EVENT_CLASS_TYPE(MouseButtonPressedEvent)
+		EVENT_CLASS_TYPE(MouseButtonPressed)
 	};
 
-	class ARGUS_API MouseButtonReleasedEvent : public Event
+	class ARGUS_API MouseButtonReleasedEvent : public MouseButtonEvent
 	{
 	public:
 		MouseButtonReleasedEvent(int button)
@@ -93,6 +93,6 @@ namespace Argus
 			return ss.str();
 		}
 
-		EVENT_CLASS_TYPE(MouseButtonReleasedEvent)
+		EVENT_CLASS_TYPE(MouseButtonReleased)
 	};
 }

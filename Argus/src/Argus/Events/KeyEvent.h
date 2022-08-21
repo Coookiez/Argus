@@ -41,6 +41,7 @@ namespace Argus
 
 	class ARGUS_API KeyReleasedEvent : public KeyEvent
 	{
+	public:
 		KeyReleasedEvent(int keycode)
 			: KeyEvent(keycode) {}
 

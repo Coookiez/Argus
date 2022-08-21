@@ -47,7 +47,7 @@ namespace Argus
 		}
 
 	protected:
-		bool m_handled = false;
+		bool m_Handled = false;
 	};
 
 	class EventDispatcher
@@ -64,11 +64,12 @@ namespace Argus
 		{
 			if (m_Event.GetEventType() == T::GetStaticType())
 			{
-				m_Event.m_Handled = func(*(T*)&mEvent);
+				m_Event.m_Handled = func(*(T*)&m_Event);
 				return true;
 			}
 			return false;
 		}
+
 	private:
 		Event& m_Event;
 	};
