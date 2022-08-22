@@ -2,8 +2,9 @@
 
 #include "Core.h"
 
-#include "Argus/Events/ApplicationEvent.h"
+#include "Argus/LayerStack.h"
 #include "Argus/Window.h"
+#include "Argus/Events/ApplicationEvent.h"
 #include "Events/Event.h"
 
 
@@ -19,10 +20,14 @@ namespace Argus {
 
 		void OnEvent(Event& e);
 
+		void PushLayer(Layer* layer);
+		void PushOverlay(Layer* layer);
+
 	private:
 		bool OnWindowClose(WindowCloseEvent& e);
 
 		std::unique_ptr<Window> m_Window;
+		LayerStack m_LayerStack;
 		bool m_Running = true;
 	};
 
