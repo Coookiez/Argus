@@ -23,9 +23,13 @@ namespace Argus {
 		void PushLayer(Layer* layer);
 		void PushOverlay(Layer* layer);
 
+		inline static Application& Get() { return *s_Instance; }
+		inline Window& GetWindow() { return *m_Window; }
+
 	private:
 		bool OnWindowClose(WindowCloseEvent& e);
 
+		static Application* s_Instance;
 		std::unique_ptr<Window> m_Window;
 		LayerStack m_LayerStack;
 		bool m_Running = true;
@@ -33,6 +37,5 @@ namespace Argus {
 
 	// To be defined in CLIENT
 	Application* CreateApplication();
-
 
 }

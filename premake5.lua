@@ -14,8 +14,12 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 -- Include directories relative to root folder (solution directory)
 IncludeDir = {}
 IncludeDir["GLFW"] = "Argus/vendor/GLFW/include"
+IncludeDir["Glad"] = "Argus/vendor/Glad/include"
+IncludeDir["ImGui"] = "Argus/vendor/imgui"
 
 include "Argus/vendor/GLFW"
+include "Argus/vendor/Glad"
+include "Argus/vendor/ImGui"
 
 project "Argus"
 	location "Argus"
@@ -38,12 +42,16 @@ project "Argus"
 	{
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
-		"%{IncludeDir.GLFW}"
+		"%{IncludeDir.GLFW}",
+		"%{IncludeDir.Glad}",
+		"%{IncludeDir.ImGui}"
 	}
 
 	links
 	{
 		"GLFW",
+		"Glad",
+		"ImGui",
 		"opengl32.lib"
 	}
 
@@ -55,7 +63,8 @@ project "Argus"
 		defines
 		{
 			"AS_PLATFORM_WINDOWS",
-			"AS_BUILD_DLL"
+			"AS_BUILD_DLL",
+			"GLFW_INCLUDE_NONE"
 		}
 
 		postbuildcommands
