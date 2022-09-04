@@ -17,14 +17,17 @@ IncludeDir["GLFW"] = "Argus/vendor/GLFW/include"
 IncludeDir["Glad"] = "Argus/vendor/Glad/include"
 IncludeDir["ImGui"] = "Argus/vendor/imgui"
 
-include "Argus/vendor/GLFW"
-include "Argus/vendor/Glad"
-include "Argus/vendor/ImGui"
+group "Dependencies"
+	include "Argus/vendor/GLFW"
+	include "Argus/vendor/Glad"
+	include "Argus/vendor/ImGui"
+group ""
 
 project "Argus"
 	location "Argus"
 	kind "SharedLib"
 	language "C++"
+	staticruntime "off"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -57,7 +60,6 @@ project "Argus"
 
 	filter "system:windows"
 		cppdialect "C++17"
-		staticruntime "On"
 		systemversion "latest"
 
 		defines
@@ -69,28 +71,29 @@ project "Argus"
 
 		postbuildcommands
 		{
-			("{COPY} %{cfg.buildtarget.abspath} ../bin/" .. outputdir .. "/Sandbox")
+			("{COPY} %{cfg.buildtarget.relpath} \"../bin/" .. outputdir .. "/Sandbox/\"")
 		}
 
 	filter "configurations:Debug"
 		defines "AS_DEBUG"
-		buildoptions"/MDd"
+		runtime "Debug"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "AS_RELEASE"
-		buildoptions"/MD"
+		runtime "Release"
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "AS_DIST"
-		buildoptions"/MD"
+		runtime "Release"
 		optimize "On"
 
 project "Sandbox"
 	location "Sandbox"
 	kind "ConsoleApp"
 	language "C++"
+	staticruntime "off"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -114,7 +117,6 @@ project "Sandbox"
 
 	filter "system:windows"
 		cppdialect "C++17"
-		staticruntime "On"
 		systemversion "latest"
 
 		defines
@@ -124,15 +126,15 @@ project "Sandbox"
 
 	filter "configurations:Debug"
 		defines "AS_DEBUG"
-		buildoptions "/MDd"
+		runtime "Debug"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "AS_RELEASE"
-		buildoptions "/MD"
+		runtime "Release"
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "AS_DIST"
-		buildoptions "/MD"
+		runtime "Release"
 		optimize "On"
