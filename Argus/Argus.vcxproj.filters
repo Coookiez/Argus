@@ -70,6 +70,8 @@
     <ClInclude Include="src\aspch.h" />
     <ClInclude Include="src\Argus\Input.h" />
     <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
+    <ClInclude Include="src\Argus\KeyCodes.h" />
+    <ClInclude Include="src\Argus\MouseButtonCodes.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Argus\Application.cpp">

@@ -162,9 +162,11 @@
     <ClInclude Include="src\Argus\Events\MouseEvent.h" />
     <ClInclude Include="src\Argus\ImGui\ImGuiLayer.h" />
     <ClInclude Include="src\Argus\Input.h" />
+    <ClInclude Include="src\Argus\KeyCodes.h" />
     <ClInclude Include="src\Argus\Layer.h" />
     <ClInclude Include="src\Argus\LayerStack.h" />
     <ClInclude Include="src\Argus\Log.h" />
+    <ClInclude Include="src\Argus\MouseButtonCodes.h" />
     <ClInclude Include="src\Argus\Window.h" />
     <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h" />
     <ClInclude Include="src\Platform\OpenGL\imgui_impl_opengl3_loader.h" />

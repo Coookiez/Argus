@@ -9,12 +9,20 @@ public:
 
 	void OnUpdate() override
 	{
-		AS_INFO("ExampleLayer::Update");
+		if (Argus::Input::IsKeyPressed(AS_KEY_TAB))
+			AS_TRACE("Tab key is pressed (poll)!");
 	}
 
 	void OnEvent(Argus::Event& event) override
 	{
-		AS_TRACE("{0}", event);
+		if (event.GetEventType() == Argus::EventType::KeyPressed)
+		{
+			Argus::KeyPressedEvent& e = (Argus::KeyPressedEvent&)event;
+			if (e.GetKeyCode() == AS_KEY_TAB)
+				AS_TRACE("Tab key is pressed (event)!");
+
+			AS_TRACE("{0}", (char)e.GetKeyCode());
+		}
 	}
 };
 
