@@ -16,6 +16,7 @@ IncludeDir = {}
 IncludeDir["GLFW"] = "Argus/vendor/GLFW/include"
 IncludeDir["Glad"] = "Argus/vendor/Glad/include"
 IncludeDir["ImGui"] = "Argus/vendor/imgui"
+IncludeDir["glm"] = "Argus/vendor/glm"
 
 group "Dependencies"
 	include "Argus/vendor/GLFW"
@@ -38,7 +39,9 @@ project "Argus"
 	files
 	{
 		"%{prj.name}/src/**.h",
-		"%{prj.name}/src/**.cpp"
+		"%{prj.name}/src/**.cpp",
+		"%{prj.name}/vendor/glm/glm/**.hpp",
+		"%{prj.name}/vendor/glm/glm/**.inl"
 	}
 
 	includedirs
@@ -47,7 +50,8 @@ project "Argus"
 		"%{prj.name}/vendor/spdlog/include",
 		"%{IncludeDir.GLFW}",
 		"%{IncludeDir.Glad}",
-		"%{IncludeDir.ImGui}"
+		"%{IncludeDir.ImGui}",
+		"%{IncludeDir.glm}"
 	}
 
 	links
@@ -107,7 +111,8 @@ project "Sandbox"
 	includedirs
 	{
 		"Argus/vendor/spdlog/include",
-		"Argus/src"
+		"Argus/src",
+		"Argus/vendor/glm"
 	}
 
 	links

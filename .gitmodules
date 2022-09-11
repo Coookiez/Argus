@@ -7,3 +7,6 @@
 [submodule "Argus/vendor/imgui"]
 	path = Argus/vendor/imgui
 	url = https://github.com/TheCherno/imgui
+[submodule "Argus/vendor/glm"]
+	path = Argus/vendor/glm
+	url = https://github.com/g-truc/glm
