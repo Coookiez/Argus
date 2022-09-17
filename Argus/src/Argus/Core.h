@@ -1,11 +1,15 @@
 #pragma once
 
 #ifdef AS_PLATFORM_WINDOWS
+#if AS_DYNAMIC_LINK
 	#ifdef AS_BUILD_DLL
 		#define ARGUS_API __declspec(dllexport)
 	#else
 		#define ARGUS_API __declspec(dllimport)
 	#endif
+#else
+	#define ARGUS_API
+#endif
 #else
 	#error Argus only supports Windows!
 #endif
