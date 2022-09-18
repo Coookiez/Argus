@@ -159,6 +159,7 @@
     <ClInclude Include="src\Argus\Log.h" />
     <ClInclude Include="src\Argus\MouseButtonCodes.h" />
     <ClInclude Include="src\Argus\Renderer\GraphicsContext.h" />
+    <ClInclude Include="src\Argus\Renderer\Shader.h" />
     <ClInclude Include="src\Argus\Window.h" />
     <ClInclude Include="src\Platform\OpenGL\OpenGLContext.h" />
     <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
@@ -587,6 +588,7 @@
     <ClCompile Include="src\Argus\Layer.cpp" />
     <ClCompile Include="src\Argus\LayerStack.cpp" />
     <ClCompile Include="src\Argus\Log.cpp" />
+    <ClCompile Include="src\Argus\Renderer\Shader.cpp" />
     <ClCompile Include="src\Platform\OpenGL\OpenGLContext.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsInput.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />

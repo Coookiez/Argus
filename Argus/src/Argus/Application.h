@@ -7,6 +7,7 @@
 #include "Argus/Events/Event.h"
 #include "Argus/ImGui/ImGuiLayer.h"
 #include "Argus/Window.h"
+#include "Argus/Renderer/Shader.h"
 
 namespace Argus {
 
@@ -36,6 +37,7 @@ namespace Argus {
 		LayerStack m_LayerStack;
 
 		unsigned int m_VertexArray, m_VertexBuffer, m_IndexBuffer;
+		std::unique_ptr<Shader> m_Shader;
 	};
 
 	// To be defined in CLIENT
