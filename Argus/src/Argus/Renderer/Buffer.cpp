@@ -13,9 +13,9 @@ namespace Argus
 			case RendererAPI::None: AS_CORE_ASSERT(false, "RendererAPI::None is currently not supported!"); return nullptr;
 			case RendererAPI::OpenGL: return new OpenGLVertexBuffer(vertices, size);
 		}
-		AS_CORE_ASSERT(false, "Unknown RendererAPI!");
 
-			return nullptr;
+		AS_CORE_ASSERT(false, "Unknown RendererAPI!");
+		return nullptr;
 	}
 
 	IndexBuffer* IndexBuffer::Create(uint32_t* indices, uint32_t size)
@@ -25,8 +25,8 @@ namespace Argus
 			case RendererAPI::None: AS_CORE_ASSERT(false, "RendererAPI::None is currently not supported!"); return nullptr;
 			case RendererAPI::OpenGL: return new OpenGLIndexBuffer(indices, size);
 		}
-		AS_CORE_ASSERT(false, "Unknown RendererAPI!");
 
+		AS_CORE_ASSERT(false, "Unknown RendererAPI!");
 		return nullptr;
 	}
 }
