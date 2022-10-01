@@ -11,6 +11,8 @@
 #include "Argus/Renderer/Shader.h"
 #include "Argus/Renderer/VertexArray.h"
 
+#include "Argus/Renderer/OrthographicCamera.h"
+
 namespace Argus {
 
 	class ARGUS_API Application
@@ -43,7 +45,7 @@ namespace Argus {
 		std::shared_ptr<IndexBuffer> m_IndexBuffer;
 
 		std::shared_ptr<VertexArray> m_SquareVA;
-
+		OrthographicCamera m_Camera;
 	};
 
 	// To be defined in CLIENT

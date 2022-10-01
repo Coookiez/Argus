@@ -160,6 +160,7 @@
     <ClInclude Include="src\Argus\MouseButtonCodes.h" />
     <ClInclude Include="src\Argus\Renderer\Buffer.h" />
     <ClInclude Include="src\Argus\Renderer\GraphicsContext.h" />
+    <ClInclude Include="src\Argus\Renderer\OrthographicCamera.h" />
     <ClInclude Include="src\Argus\Renderer\RenderCommand.h" />
     <ClInclude Include="src\Argus\Renderer\Renderer.h" />
     <ClInclude Include="src\Argus\Renderer\RendererAPI.h" />
@@ -597,6 +598,7 @@
     <ClCompile Include="src\Argus\LayerStack.cpp" />
     <ClCompile Include="src\Argus\Log.cpp" />
     <ClCompile Include="src\Argus\Renderer\Buffer.cpp" />
+    <ClCompile Include="src\Argus\Renderer\OrthographicCamera.cpp" />
     <ClCompile Include="src\Argus\Renderer\RenderCommand.cpp" />
     <ClCompile Include="src\Argus\Renderer\Renderer.cpp" />
     <ClCompile Include="src\Argus\Renderer\RendererAPI.cpp" />
