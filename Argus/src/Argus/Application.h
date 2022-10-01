@@ -2,20 +2,16 @@
 
 #include "Core.h"
 
-#include "Argus/LayerStack.h"
-#include "Argus/Events/ApplicationEvent.h"
-#include "Argus/Events/Event.h"
-#include "Argus/ImGui/ImGuiLayer.h"
 #include "Argus/Window.h"
-#include "Argus/Renderer/Buffer.h"
-#include "Argus/Renderer/Shader.h"
-#include "Argus/Renderer/VertexArray.h"
+#include "Argus/LayerStack.h"
+#include "Argus/Events/Event.h"
+#include "Argus/Events/ApplicationEvent.h"
 
-#include "Argus/Renderer/OrthographicCamera.h"
+#include "Argus/ImGui/ImGuiLayer.h"
 
 namespace Argus {
 
-	class ARGUS_API Application
+	class Application
 	{
 	public:
 		Application();
@@ -40,12 +36,6 @@ namespace Argus {
 		bool m_Running = true;
 		LayerStack m_LayerStack;
 
-		std::shared_ptr<Shader> m_Shader, m_BlueShader;
-		std::shared_ptr<VertexArray> m_VertexArray;
-		std::shared_ptr<IndexBuffer> m_IndexBuffer;
-
-		std::shared_ptr<VertexArray> m_SquareVA;
-		OrthographicCamera m_Camera;
 	};
 
 	// To be defined in CLIENT
