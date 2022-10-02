@@ -113,7 +113,8 @@ project "Sandbox"
 	{
 		"Argus/vendor/spdlog/include",
 		"Argus/src",
-		"Argus/vendor/glm"
+		"Argus/vendor",
+		"%{IncludeDir.glm}"
 	}
 
 	links
