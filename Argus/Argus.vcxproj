@@ -146,6 +146,7 @@
     <ClInclude Include="src\Argus.h" />
     <ClInclude Include="src\Argus\Application.h" />
     <ClInclude Include="src\Argus\Core.h" />
+    <ClInclude Include="src\Argus\Core\Timestep.h" />
     <ClInclude Include="src\Argus\EntryPoint.h" />
     <ClInclude Include="src\Argus\Events\ApplicationEvent.h" />
     <ClInclude Include="src\Argus\Events\Event.h" />

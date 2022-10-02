@@ -6,6 +6,8 @@
 #include "Argus/Layer.h"
 #include "Argus/Log.h"
 
+#include "Argus/Core/Timestep.h"
+
 #include "Argus/Input.h"
 #include "Argus/KeyCodes.h"
 #include "Argus/MouseButtonCodes.h"

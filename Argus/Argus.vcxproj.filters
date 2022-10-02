@@ -1356,6 +1356,7 @@
     <ClInclude Include="src\Argus\Renderer\RenderCommand.h" />
     <ClInclude Include="src\Platform\OpenGL\OpenGLRendererAPI.h" />
     <ClInclude Include="src\Argus\Renderer\OrthographicCamera.h" />
+    <ClInclude Include="src\Argus\Core\Timestep.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Argus\Application.cpp">

@@ -7,6 +7,8 @@
 #include "Argus/Events/Event.h"
 #include "Argus/Events/ApplicationEvent.h"
 
+#include "Argus/Core/Timestep.h"
+
 #include "Argus/ImGui/ImGuiLayer.h"
 
 namespace Argus {
@@ -35,7 +37,7 @@ namespace Argus {
 		ImGuiLayer* m_ImGuiLayer;
 		bool m_Running = true;
 		LayerStack m_LayerStack;
-
+		float m_LastFrameTime = 0.0f;
 	};
 
 	// To be defined in CLIENT
