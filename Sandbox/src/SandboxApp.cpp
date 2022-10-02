@@ -145,17 +145,6 @@ public:
 		else if (Argus::Input::IsKeyPressed(AS_KEY_D))
 			m_CameraRotation -= m_CameraRotationSpeed * ts;
 
-		if (Argus::Input::IsKeyPressed(AS_KEY_J))
-			m_SquarePosition.x -= m_CameraMoveSpeed * ts;
-		else if (Argus::Input::IsKeyPressed(AS_KEY_L))
-			m_SquarePosition.x += m_CameraMoveSpeed * ts;
-
-		if (Argus::Input::IsKeyPressed(AS_KEY_K))
-			m_SquarePosition.y -= m_CameraMoveSpeed * ts;
-		else if (Argus::Input::IsKeyPressed(AS_KEY_I))
-			m_SquarePosition.y += m_CameraMoveSpeed * ts;
-
-
 		Argus::RenderCommand::SetClearColor({ 0.1f, 0.1f, 0.1f, 1 });
 		Argus::RenderCommand::Clear();
 
@@ -175,7 +164,7 @@ public:
 				Argus::Renderer::Submit(m_BlueShader, m_SquareVA, transform);
 			}
 		}
-		//Argus::Renderer::Submit(m_Shader, m_VertexArray);
+		Argus::Renderer::Submit(m_Shader, m_VertexArray);
 
 		Argus::Renderer::EndScene();
 	}
