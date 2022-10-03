@@ -22,7 +22,7 @@ public:
 			 0.0f,  0.5f, 0.0f, 0.8f, 0.8f, 0.2f, 1.0f
 		};
 
-		std::shared_ptr<Argus::VertexBuffer> vertexBuffer;
+		Argus::Ref<Argus::VertexBuffer> vertexBuffer;
 		vertexBuffer.reset(Argus::VertexBuffer::Create(vertices, sizeof(vertices)));
 		Argus::BufferLayout layout = {
 			{ Argus::ShaderDataType::Float3, "a_Position" },
@@ -32,7 +32,7 @@ public:
 		m_VertexArray->AddVertexBuffer(vertexBuffer);
 
 		uint32_t indices[3] = { 0, 1, 2 };
-		std::shared_ptr<Argus::IndexBuffer> indexBuffer;
+		Argus::Ref<Argus::IndexBuffer> indexBuffer;
 		indexBuffer.reset(Argus::IndexBuffer::Create(indices, sizeof(indices) / sizeof(uint32_t)));
 		m_VertexArray->SetIndexBuffer(indexBuffer);
 
@@ -47,7 +47,7 @@ public:
 			-0.5f, +0.5f, 0.0f
 		};
 
-		std::shared_ptr<Argus::VertexBuffer> squareVB;
+		Argus::Ref<Argus::VertexBuffer> squareVB;
 		squareVB.reset(Argus::VertexBuffer::Create(squareVertices, sizeof(squareVertices)));
 		squareVB->SetLayout({
 			{ Argus::ShaderDataType::Float3, "a_Position" }
@@ -55,7 +55,7 @@ public:
 		m_SquareVA->AddVertexBuffer(squareVB);
 
 		uint32_t squareIndices[6] = { 0, 1, 2, 2, 3, 0 };
-		std::shared_ptr<Argus::IndexBuffer> squareIB;
+		Argus::Ref<Argus::IndexBuffer> squareIB;
 		squareIB.reset(Argus::IndexBuffer::Create(squareIndices, sizeof(squareIndices) / sizeof(uint32_t)));
 		m_SquareVA->SetIndexBuffer(squareIB);
 
@@ -189,11 +189,11 @@ public:
 
 	} 
 private:
-	std::shared_ptr<Argus::Shader> m_Shader, m_FlatColorShader;
-	std::shared_ptr<Argus::VertexArray> m_VertexArray;
-	std::shared_ptr<Argus::IndexBuffer> m_IndexBuffer;
-
-	std::shared_ptr<Argus::VertexArray> m_SquareVA;
+	Argus::Ref<Argus::Shader> m_Shader, m_FlatColorShader;
+	Argus::Ref<Argus::VertexArray> m_VertexArray;
+	Argus::Ref<Argus::IndexBuffer> m_IndexBuffer;
+	
+	Argus::Ref<Argus::VertexArray> m_SquareVA;
 	Argus::OrthographicCamera m_Camera;
 
 	glm::vec3 m_CameraPosition;
