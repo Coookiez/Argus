@@ -17,6 +17,7 @@ IncludeDir["GLFW"] = "Argus/vendor/GLFW/include"
 IncludeDir["Glad"] = "Argus/vendor/Glad/include"
 IncludeDir["ImGui"] = "Argus/vendor/imgui"
 IncludeDir["glm"] = "Argus/vendor/glm"
+IncludeDir["stb_image"] = "Argus/vendor/stb_image"
 
 group "Dependencies"
 	include "Argus/vendor/GLFW"  
@@ -41,6 +42,8 @@ project "Argus"
 	{
 		"%{prj.name}/src/**.h",
 		"%{prj.name}/src/**.cpp",
+		"%{prj.name}/vendor/stb_image/**.h",
+		"%{prj.name}/vendor/stb_image/**.cpp",
 		"%{prj.name}/vendor/glm/glm/**.hpp",
 		"%{prj.name}/vendor/glm/glm/**.inl"
 	}
@@ -57,7 +60,8 @@ project "Argus"
 		"%{IncludeDir.GLFW}",
 		"%{IncludeDir.Glad}",
 		"%{IncludeDir.ImGui}",
-		"%{IncludeDir.glm}"
+		"%{IncludeDir.glm}",
+		"%{IncludeDir.stb_image}"
 	}
 
 	links

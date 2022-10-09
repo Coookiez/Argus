@@ -21,6 +21,7 @@
 
 #include "Argus/Renderer/Buffer.h"
 #include "Argus/Renderer/Shader.h"
+#include "Argus/Renderer/Texture.h"
 #include "Argus/Renderer/VertexArray.h"
 
 #include "Argus/Renderer/OrthographicCamera.h"
