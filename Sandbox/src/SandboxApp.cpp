@@ -94,7 +94,7 @@ public:
 			}
 		)";
 
-		m_Shader.reset(Argus::Shader::Create(vertexSrc, fragmentSrc));
+		m_Shader = Argus::Shader::Create("VertexPosColor", vertexSrc, fragmentSrc);
 
 		std::string flatColorShaderVertexSrc = R"(
 			#version 330 core
@@ -128,14 +128,14 @@ public:
 			}
 		)";
 
-		m_FlatColorShader.reset(Argus::Shader::Create(flatColorShaderVertexSrc, flatColorShaderFragmentSrc));
+		m_FlatColorShader = Argus::Shader::Create("FlatColor", flatColorShaderVertexSrc, flatColorShaderFragmentSrc);
 
-		m_TextureShader.reset(Argus::Shader::Create("assets/shaders/Texture.glsl"));
+		auto textureShader = m_ShaderLibrary.Load("assets/shaders/Texture.glsl");
 
 		m_Texture = Argus::Texture2D::Create("assets/textures/Checkerboard.png");
 
-		std::dynamic_pointer_cast<Argus::OpenGLShader>(m_TextureShader)->Bind();
-		std::dynamic_pointer_cast<Argus::OpenGLShader>(m_TextureShader)->UploadUniformInt("u_Texture", 0);
+		std::dynamic_pointer_cast<Argus::OpenGLShader>(textureShader)->Bind();
+		std::dynamic_pointer_cast<Argus::OpenGLShader>(textureShader)->UploadUniformInt("u_Texture", 0);
 	}
 
 
@@ -181,8 +181,9 @@ public:
 			}
 		}
 
+		auto textureShader = m_ShaderLibrary.Get("Texture");
 		m_Texture->Bind();
-		Argus::Renderer::Submit(m_TextureShader, m_SquareVA, glm::scale(glm::mat4(1.0f), glm::vec3(1.5f)));
+		Argus::Renderer::Submit(textureShader, m_SquareVA, glm::scale(glm::mat4(1.0f), glm::vec3(1.5f)));
 
 		//Argus::Renderer::Submit(m_Shader, m_VertexArray);
 
@@ -201,7 +202,8 @@ public:
 
 	} 
 private:
-	Argus::Ref<Argus::Shader> m_Shader, m_FlatColorShader, m_TextureShader;
+	Argus::ShaderLibrary m_ShaderLibrary;
+	Argus::Ref<Argus::Shader> m_Shader, m_FlatColorShader;
 
 	Argus::Ref<Argus::VertexArray> m_VertexArray;
 	Argus::Ref<Argus::IndexBuffer> m_IndexBuffer;
