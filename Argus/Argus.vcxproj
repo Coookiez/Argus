@@ -143,6 +143,7 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\Argus\OrthographicCameraController.h" />
     <ClInclude Include="src\Argus.h" />
     <ClInclude Include="src\Argus\Application.h" />
     <ClInclude Include="src\Argus\Core.h" />
@@ -596,6 +597,7 @@
     <ClInclude Include="vendor\stb_image\stb_image.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Argus\OrthographicCameraController.cpp" />
     <ClCompile Include="src\Argus\Application.cpp" />
     <ClCompile Include="src\Argus\ImGui\ImGuiBuild.cpp" />
     <ClCompile Include="src\Argus\ImGui\ImGuiLayer.cpp" />

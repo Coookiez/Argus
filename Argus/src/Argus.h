@@ -11,6 +11,7 @@
 #include "Argus/Input.h"
 #include "Argus/KeyCodes.h"
 #include "Argus/MouseButtonCodes.h"
+#include "Argus/OrthographicCameraController.h"
 
 #include "Argus/ImGui/ImGuiLayer.h"
 

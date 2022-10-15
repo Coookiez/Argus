@@ -10,7 +10,7 @@ class ExampleLayer : public Argus::Layer
 {
 public:
 	ExampleLayer()
-		: Layer("Example"), m_Camera(-1.6f, 1.6f, -0.9f, 0.9f), m_CameraPosition(0.0f), m_SquarePosition(0.0f)
+		: Layer("Example"), m_CameraController(1280.0f / 720.0f, true)
 	{
 		///  TRIANGLE
 
@@ -142,29 +142,14 @@ public:
 	void OnUpdate(Argus::Timestep ts) override
 	{
 		//AS_TRACE("Delta time: {0}s ({1}ms)", ts.GetSeconds(), ts.GetMilliseconds());
+		// Update
+		m_CameraController.OnUpdate(ts);
 
-		if (Argus::Input::IsKeyPressed(AS_KEY_RIGHT))
-			m_CameraPosition.x -= m_CameraMoveSpeed * ts;
-		else if (Argus::Input::IsKeyPressed(AS_KEY_LEFT))
-			m_CameraPosition.x += m_CameraMoveSpeed * ts;
-
-		if (Argus::Input::IsKeyPressed(AS_KEY_UP))
-			m_CameraPosition.y -= m_CameraMoveSpeed * ts;
-		else if (Argus::Input::IsKeyPressed(AS_KEY_DOWN))
-			m_CameraPosition.y += m_CameraMoveSpeed * ts;
-
-		if (Argus::Input::IsKeyPressed(AS_KEY_A))
-			m_CameraRotation += m_CameraRotationSpeed * ts;
-		else if (Argus::Input::IsKeyPressed(AS_KEY_D))
-			m_CameraRotation -= m_CameraRotationSpeed * ts;
-
+		// Render
 		Argus::RenderCommand::SetClearColor({ 0.1f, 0.1f, 0.1f, 1 });
 		Argus::RenderCommand::Clear();
 
-		m_Camera.SetPosition(m_CameraPosition);
-		m_Camera.SetRotation(m_CameraRotation);
-
-		Argus::Renderer::BeginScene(m_Camera);
+		Argus::Renderer::BeginScene(m_CameraController.GetCamera());
 
 		glm::mat4 scale = glm::scale(glm::mat4(1.0f), glm::vec3(0.1f));
 
@@ -199,8 +184,9 @@ public:
 
 	void OnEvent(Argus::Event& event) override
 	{
-
+		m_CameraController.OnEvent(event);
 	} 
+
 private:
 	Argus::ShaderLibrary m_ShaderLibrary;
 	Argus::Ref<Argus::Shader> m_Shader, m_FlatColorShader;
@@ -211,14 +197,8 @@ private:
 	Argus::Ref<Argus::VertexArray> m_SquareVA;
 	Argus::Ref<Argus::Texture2D> m_Texture;
 
-	Argus::OrthographicCamera m_Camera;
+	Argus::OrthographicCameraController m_CameraController;
 
-	glm::vec3 m_CameraPosition;
-	float m_CameraMoveSpeed = 1.f;
-	float m_CameraRotation = 0.0f;
-	float m_CameraRotationSpeed = 100.f;
-
-	glm::vec3 m_SquarePosition;
 	glm::vec3 m_SquareColor = { 0.2f, 0.3f, 0.8f };
 };
 
