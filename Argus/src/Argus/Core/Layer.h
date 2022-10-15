@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Argus/Core.h"
+#include "Argus/Core/Core.h"
 #include "Argus/Core/Timestep.h"
 #include "Argus/Events/Event.h"
 

@@ -1,7 +1,7 @@
 #include "aspch.h"
 #include "WindowsInput.h"
 
-#include "Argus/Application.h"
+#include "Argus/Core/Application.h"
 #include <GLFW/glfw3.h>
 
 namespace Argus

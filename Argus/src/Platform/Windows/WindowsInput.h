@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Argus/Input.h"
+#include "Argus/Core/Input.h"
 
 namespace Argus
 {

@@ -1,7 +1,7 @@
 #include "aspch.h"
 #include "Application.h"
 
-#include "Argus/Log.h"
+#include "Argus/Core/Log.h"
 
 #include "Argus/Renderer/Renderer.h"
 

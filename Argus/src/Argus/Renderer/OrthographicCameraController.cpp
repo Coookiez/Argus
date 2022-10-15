@@ -1,8 +1,8 @@
 #include "aspch.h"
 
-#include "Argus/OrthographicCameraController.h"
-#include "Argus/Input.h"
-#include "Argus/KeyCodes.h"
+#include "Argus/Renderer/OrthographicCameraController.h"
+#include "Argus/Core/Input.h"
+#include "Argus/Core/KeyCodes.h"
 
 namespace Argus
 {

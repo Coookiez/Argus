@@ -2,8 +2,8 @@
 
 #include "Core.h"
 
-#include "Argus/Window.h"
-#include "Argus/LayerStack.h"
+#include "Argus/Core/Window.h"
+#include "Argus/Core/LayerStack.h"
 #include "Argus/Events/Event.h"
 #include "Argus/Events/ApplicationEvent.h"
 

@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Argus/Core.h"
+#include "Argus/Core/Core.h"
 #include "Layer.h"
 
 #include <vector>

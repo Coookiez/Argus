@@ -143,33 +143,33 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="src\Argus\OrthographicCameraController.h" />
     <ClInclude Include="src\Argus.h" />
-    <ClInclude Include="src\Argus\Application.h" />
-    <ClInclude Include="src\Argus\Core.h" />
+    <ClInclude Include="src\Argus\Core\Application.h" />
+    <ClInclude Include="src\Argus\Core\Core.h" />
+    <ClInclude Include="src\Argus\Core\EntryPoint.h" />
+    <ClInclude Include="src\Argus\Core\Input.h" />
+    <ClInclude Include="src\Argus\Core\KeyCodes.h" />
+    <ClInclude Include="src\Argus\Core\Layer.h" />
+    <ClInclude Include="src\Argus\Core\LayerStack.h" />
+    <ClInclude Include="src\Argus\Core\Log.h" />
+    <ClInclude Include="src\Argus\Core\MouseButtonCodes.h" />
     <ClInclude Include="src\Argus\Core\Timestep.h" />
-    <ClInclude Include="src\Argus\EntryPoint.h" />
+    <ClInclude Include="src\Argus\Core\Window.h" />
     <ClInclude Include="src\Argus\Events\ApplicationEvent.h" />
     <ClInclude Include="src\Argus\Events\Event.h" />
     <ClInclude Include="src\Argus\Events\KeyEvent.h" />
     <ClInclude Include="src\Argus\Events\MouseEvent.h" />
     <ClInclude Include="src\Argus\ImGui\ImGuiLayer.h" />
-    <ClInclude Include="src\Argus\Input.h" />
-    <ClInclude Include="src\Argus\KeyCodes.h" />
-    <ClInclude Include="src\Argus\Layer.h" />
-    <ClInclude Include="src\Argus\LayerStack.h" />
-    <ClInclude Include="src\Argus\Log.h" />
-    <ClInclude Include="src\Argus\MouseButtonCodes.h" />
     <ClInclude Include="src\Argus\Renderer\Buffer.h" />
     <ClInclude Include="src\Argus\Renderer\GraphicsContext.h" />
     <ClInclude Include="src\Argus\Renderer\OrthographicCamera.h" />
+    <ClInclude Include="src\Argus\Renderer\OrthographicCameraController.h" />
     <ClInclude Include="src\Argus\Renderer\RenderCommand.h" />
     <ClInclude Include="src\Argus\Renderer\Renderer.h" />
     <ClInclude Include="src\Argus\Renderer\RendererAPI.h" />
     <ClInclude Include="src\Argus\Renderer\Shader.h" />
     <ClInclude Include="src\Argus\Renderer\Texture.h" />
     <ClInclude Include="src\Argus\Renderer\VertexArray.h" />
-    <ClInclude Include="src\Argus\Window.h" />
     <ClInclude Include="src\Platform\OpenGL\OpenGLBuffer.h" />
     <ClInclude Include="src\Platform\OpenGL\OpenGLContext.h" />
     <ClInclude Include="src\Platform\OpenGL\OpenGLRendererAPI.h" />
@@ -597,15 +597,15 @@
     <ClInclude Include="vendor\stb_image\stb_image.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Argus\OrthographicCameraController.cpp" />
-    <ClCompile Include="src\Argus\Application.cpp" />
+    <ClCompile Include="src\Argus\Core\Application.cpp" />
+    <ClCompile Include="src\Argus\Core\Layer.cpp" />
+    <ClCompile Include="src\Argus\Core\LayerStack.cpp" />
+    <ClCompile Include="src\Argus\Core\Log.cpp" />
     <ClCompile Include="src\Argus\ImGui\ImGuiBuild.cpp" />
     <ClCompile Include="src\Argus\ImGui\ImGuiLayer.cpp" />
-    <ClCompile Include="src\Argus\Layer.cpp" />
-    <ClCompile Include="src\Argus\LayerStack.cpp" />
-    <ClCompile Include="src\Argus\Log.cpp" />
     <ClCompile Include="src\Argus\Renderer\Buffer.cpp" />
     <ClCompile Include="src\Argus\Renderer\OrthographicCamera.cpp" />
+    <ClCompile Include="src\Argus\Renderer\OrthographicCameraController.cpp" />
     <ClCompile Include="src\Argus\Renderer\RenderCommand.cpp" />
     <ClCompile Include="src\Argus\Renderer\Renderer.cpp" />
     <ClCompile Include="src\Argus\Renderer\RendererAPI.cpp" />
