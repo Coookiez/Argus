@@ -27,7 +27,4 @@
 
 #include "Argus/Renderer/OrthographicCamera.h"
 
-
-//  --- Entry Point ---------------
-#include "Argus/Core/EntryPoint.h"
 //  -------------------------------

@@ -1,10 +1,14 @@
 #include <Argus.h>
+#include <Argus/Core/EntryPoint.h>
 
 #include "Platform/OpenGL/OpenGLShader.h"
+
 #include "imgui/imgui.h"
 
 #include "glm/gtc/matrix_transform.hpp"
 #include "glm/gtc/type_ptr.hpp"
+
+#include "Sandbox2D.h"
 
 class ExampleLayer : public Argus::Layer
 {
@@ -14,7 +18,7 @@ public:
 	{
 		///  TRIANGLE
 
-		m_VertexArray.reset(Argus::VertexArray::Create());
+		m_VertexArray = Argus::VertexArray::Create();
 
 		float vertices[3 * 7] = {
 			-0.5f, -0.5f, 0.0f, 0.8f, 0.2f, 0.8f, 1.0f,
@@ -36,7 +40,7 @@ public:
 		indexBuffer.reset(Argus::IndexBuffer::Create(indices, sizeof(indices) / sizeof(uint32_t)));
 		m_VertexArray->SetIndexBuffer(indexBuffer);
 
-		m_SquareVA.reset(Argus::VertexArray::Create());
+		m_SquareVA = Argus::VertexArray::Create();
 
 		///  SQUARE
 
@@ -182,9 +186,9 @@ public:
 		ImGui::End();
 	}
 
-	void OnEvent(Argus::Event& event) override
+	void OnEvent(Argus::Event& e) override
 	{
-		m_CameraController.OnEvent(event);
+		m_CameraController.OnEvent(e);
 	} 
 
 private:
@@ -207,7 +211,8 @@ class Sandbox : public Argus::Application
 public:
 	Sandbox()
 	{
-		PushLayer(new ExampleLayer());
+		//PushLayer(new ExampleLayer());
+		PushLayer(new Sandbox2D());
 	}
 
 	~Sandbox()
