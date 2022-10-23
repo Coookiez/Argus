@@ -18,6 +18,7 @@
 //  --- Renderer ---------------
 
 #include "Argus/Renderer/Renderer.h"
+#include "Argus/Renderer/Renderer2D.h"
 #include "Argus/Renderer/RenderCommand.h"
 
 #include "Argus/Renderer/Buffer.h"
