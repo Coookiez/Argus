@@ -14,7 +14,8 @@
 
 #include "Argus/Core/Log.h"
 
+#include "Argus/Debug/Instrumentor.h"
+
 #ifdef AS_PLATFORM_WINDOWS
 	#include "Windows.h"
 #endif
-

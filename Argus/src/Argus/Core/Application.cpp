@@ -17,6 +17,8 @@ namespace Argus {
 	
 	Application::Application()
 	{
+		AS_PROFILE_FUNCTION();
+
 		AS_CORE_ASSERT(!s_Instance, "Application already exists!");
 		s_Instance = this;
 		m_Window = std::unique_ptr<Window>(Window::Create());
@@ -30,11 +32,15 @@ namespace Argus {
 
 	Application::~Application()
 	{
+		AS_PROFILE_FUNCTION();
 
+		Renderer::Shutdown();
 	}
 
 	void Application::OnEvent(Event& e)
 	{
+		AS_PROFILE_FUNCTION();
+
 		EventDispatcher dispatcher(e);
 		dispatcher.Dispatch<WindowCloseEvent>(BIND_EVENT_FN(OnWindowClose));
 		dispatcher.Dispatch<WindowResizeEvent>(BIND_EVENT_FN(OnWindowResize));
@@ -50,34 +56,51 @@ namespace Argus {
 
 	void Application::PushLayer(Layer* layer)
 	{
+		AS_PROFILE_FUNCTION();
+
 		m_LayerStack.PushLayer(layer);
 		layer->OnAttach();
 	}
 
 	void Application::PushOverlay(Layer* layer)
 	{
+		AS_PROFILE_FUNCTION();
+
 		m_LayerStack.PushOverlay(layer);
 		layer->OnAttach();
 	}
 	
 	void Application::Run()
 	{
+		AS_PROFILE_FUNCTION();
+
 		while (m_Running)
 		{
+			AS_PROFILE_SCOPE("RunLoop");
+
 			float time = (float)glfwGetTime(); // Platform::GetTime
 			Timestep timestep = time - m_LastFrameTime;
 			m_LastFrameTime = time;
 
 			if (!m_Minimized)
 			{
-				for (Layer* layer : m_LayerStack)
-					layer->OnUpdate(timestep);
+				{
+					AS_PROFILE_SCOPE("LayerStack OnUpdate");
+
+					for (Layer* layer : m_LayerStack)
+						layer->OnUpdate(timestep);
+				}
+
+				m_ImGuiLayer->Begin();
+				{
+					AS_PROFILE_SCOPE("Layer OnImGuiRender");
+
+					for (Layer* layer : m_LayerStack)
+						layer->OnImGuiRender();
+				}
+				m_ImGuiLayer->End();
 			}
 
-			m_ImGuiLayer->Begin();
-			for (Layer* layer : m_LayerStack)
-				layer->OnImGuiRender();
-			m_ImGuiLayer->End();
 
 			m_Window->OnUpdate();
 		};
@@ -91,6 +114,8 @@ namespace Argus {
 
 	bool Application::OnWindowResize(WindowResizeEvent& e)
 	{
+		AS_PROFILE_FUNCTION();
+
 		if (e.GetWidth() == 0 || e.GetHeight() == 0)
 		{
 			m_Minimized = true;

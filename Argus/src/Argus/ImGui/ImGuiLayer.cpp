@@ -28,6 +28,8 @@ namespace Argus
 
 	void ImGuiLayer::OnAttach()
 	{
+		AS_PROFILE_FUNCTION();
+
 		// Setup Dear ImGui context
 		IMGUI_CHECKVERSION();
 		ImGui::CreateContext();
@@ -61,6 +63,8 @@ namespace Argus
 
 	void ImGuiLayer::OnDetach()
 	{
+		AS_PROFILE_FUNCTION();
+
 		ImGui_ImplOpenGL3_Shutdown();
 		ImGui_ImplGlfw_Shutdown();
 		ImGui::DestroyContext();
@@ -68,6 +72,8 @@ namespace Argus
 
 	void ImGuiLayer::Begin()
 	{
+		AS_PROFILE_FUNCTION();
+
 		ImGui_ImplOpenGL3_NewFrame();
 		ImGui_ImplGlfw_NewFrame();
 		ImGui::NewFrame();
@@ -75,6 +81,8 @@ namespace Argus
 
 	void ImGuiLayer::End()
 	{
+		AS_PROFILE_FUNCTION();
+
 		ImGuiIO& io = ImGui::GetIO();
 		Application& app = Application::Get();
 		io.DisplaySize = ImVec2((float)app.GetWindow().GetWidth(), (float)app.GetWindow().GetHeight());
@@ -90,11 +98,5 @@ namespace Argus
 			ImGui::RenderPlatformWindowsDefault();
 			glfwMakeContextCurrent(backup_current_context);
 		}
-	}
-
-	void ImGuiLayer::OnImGuiRender()
-	{
-		static bool show = true;
-		ImGui::ShowDemoWindow(&show);
 	}
 }
