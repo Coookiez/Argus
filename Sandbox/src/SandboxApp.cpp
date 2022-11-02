@@ -26,8 +26,7 @@ public:
 			 0.0f,  0.5f, 0.0f, 0.8f, 0.8f, 0.2f, 1.0f
 		};
 
-		Argus::Ref<Argus::VertexBuffer> vertexBuffer;
-		vertexBuffer.reset(Argus::VertexBuffer::Create(vertices, sizeof(vertices)));
+		Argus::Ref<Argus::VertexBuffer> vertexBuffer = Argus::VertexBuffer::Create(vertices, sizeof(vertices));
 		Argus::BufferLayout layout = {
 			{ Argus::ShaderDataType::Float3, "a_Position" },
 			{ Argus::ShaderDataType::Float4, "a_Color" }
@@ -36,8 +35,7 @@ public:
 		m_VertexArray->AddVertexBuffer(vertexBuffer);
 
 		uint32_t indices[3] = { 0, 1, 2 };
-		Argus::Ref<Argus::IndexBuffer> indexBuffer;
-		indexBuffer.reset(Argus::IndexBuffer::Create(indices, sizeof(indices) / sizeof(uint32_t)));
+		Argus::Ref<Argus::IndexBuffer> indexBuffer = Argus::IndexBuffer::Create(indices, sizeof(indices) / sizeof(uint32_t));
 		m_VertexArray->SetIndexBuffer(indexBuffer);
 
 		m_SquareVA = Argus::VertexArray::Create();
@@ -51,8 +49,7 @@ public:
 			-0.5f, +0.5f, 0.0f, 0.0f, 1.0f
 		};
 
-		Argus::Ref<Argus::VertexBuffer> squareVB;
-		squareVB.reset(Argus::VertexBuffer::Create(squareVertices, sizeof(squareVertices)));
+		Argus::Ref<Argus::VertexBuffer> squareVB = Argus::VertexBuffer::Create(squareVertices, sizeof(squareVertices));
 		squareVB->SetLayout({
 			{ Argus::ShaderDataType::Float3, "a_Position" },
 			{ Argus::ShaderDataType::Float2, "a_TexCoord" }
@@ -60,8 +57,7 @@ public:
 		m_SquareVA->AddVertexBuffer(squareVB);
 
 		uint32_t squareIndices[6] = { 0, 1, 2, 2, 3, 0 };
-		Argus::Ref<Argus::IndexBuffer> squareIB;
-		squareIB.reset(Argus::IndexBuffer::Create(squareIndices, sizeof(squareIndices) / sizeof(uint32_t)));
+		Argus::Ref<Argus::IndexBuffer> squareIB = Argus::IndexBuffer::Create(squareIndices, sizeof(squareIndices) / sizeof(uint32_t));
 		m_SquareVA->SetIndexBuffer(squareIB);
 
 		std::string vertexSrc = R"(
