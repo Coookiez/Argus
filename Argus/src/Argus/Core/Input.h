@@ -4,15 +4,14 @@
 
 namespace Argus
 {
-
 	class ARGUS_API Input
 	{
 	public:
-		inline static bool IsKeyPressed(int keycode) { return s_Instance->IsKeyPressedImpl(keycode); }
-		inline static bool IsMouseButtonPressed(int button) { return s_Instance->IsMouseButtonPressedImpl(button); }
-		inline static bool GetMouseX() { return s_Instance->IsMouseXImpl(); }
-		inline static bool GetMouseY() { return s_Instance->IsMouseYImpl(); }
-		inline static std::pair<float, float> GetMousePosition() { return s_Instance->GetMousePositionImpl(); }
+		static bool IsKeyPressed(int keycode) { return s_Instance->IsKeyPressedImpl(keycode); }
+		static bool IsMouseButtonPressed(int button) { return s_Instance->IsMouseButtonPressedImpl(button); }
+		static bool GetMouseX() { return s_Instance->IsMouseXImpl(); }
+		static bool GetMouseY() { return s_Instance->IsMouseYImpl(); }
+		static std::pair<float, float> GetMousePosition() { return s_Instance->GetMousePositionImpl(); }
 
 	protected:
 		virtual bool IsKeyPressedImpl(int keycode) = 0;
@@ -23,6 +22,5 @@ namespace Argus
 
 	private:
 		static Input* s_Instance;
-
 	};
 }
