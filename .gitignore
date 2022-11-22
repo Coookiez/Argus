@@ -9,3 +9,8 @@ packages/
 Sandbox/ArgusProfile-Runtime.json
 Sandbox/ArgusProfile-Shutdown.json
 Sandbox/ArgusProfile-Startup.json
+
+# Visual Studio files and folder
+.vs/
+*.sln
+*.vcxproj*
