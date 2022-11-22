@@ -1,12 +1,12 @@
 #pragma once
 
-#include "Core.h"
+#include "Argus/Core/Base.h"
 #include "spdlog/spdlog.h"
 #include "spdlog/fmt/ostr.h"
 
 namespace Argus {
 	
-	class ARGUS_API Log
+	class Log
 	{
 	public:
 		static void Init();

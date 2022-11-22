@@ -145,7 +145,7 @@
   <ItemGroup>
     <ClInclude Include="src\Argus.h" />
     <ClInclude Include="src\Argus\Core\Application.h" />
-    <ClInclude Include="src\Argus\Core\Core.h" />
+    <ClInclude Include="src\Argus\Core\Base.h" />
     <ClInclude Include="src\Argus\Core\EntryPoint.h" />
     <ClInclude Include="src\Argus\Core\Input.h" />
     <ClInclude Include="src\Argus\Core\KeyCodes.h" />

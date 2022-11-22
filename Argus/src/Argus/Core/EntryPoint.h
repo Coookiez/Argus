@@ -1,5 +1,7 @@
 #pragma once
 
+#include "Argus/Core/Base.h"
+
 #ifdef AS_PLATFORM_WINDOWS
 
 extern Argus::Application* Argus::CreateApplication();

@@ -2,7 +2,7 @@
 
 #include "aspch.h"
 
-#include "Argus/Core/Core.h"
+#include "Argus/Core/Base.h"
 #include "Argus/Events/Event.h"
 
 namespace Argus
@@ -19,7 +19,7 @@ namespace Argus
 	};
 
 	// Interface representing a desktop system based Window
-	class ARGUS_API Window
+	class Window
 	{
 	public:
 		using EventCallbackFn = std::function<void(Event&)>;

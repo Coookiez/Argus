@@ -1,10 +1,10 @@
 #pragma once
 
-#include "Argus/Core/Core.h"
+#include "Argus/Core/Base.h"
 
 namespace Argus
 {
-	class ARGUS_API Input
+	class Input
 	{
 	public:
 		static bool IsKeyPressed(int keycode) { return s_Instance->IsKeyPressedImpl(keycode); }

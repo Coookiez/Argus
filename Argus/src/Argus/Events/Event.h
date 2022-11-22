@@ -2,7 +2,7 @@
 
 #include "aspch.h"
 
-#include "Argus/Core/Core.h"
+#include "Argus/Core/Base.h"
 
 namespace Argus
 {
@@ -31,7 +31,7 @@ namespace Argus
 
 #define EVENT_CLASS_CATEGORY(category) virtual int GetCategoryFlags() const override { return category; }
 
-	class ARGUS_API Event
+	class Event
 	{
 		friend class EventDispatcher;
 

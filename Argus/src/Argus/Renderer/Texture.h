@@ -2,7 +2,7 @@
 
 #include <string>
 
-#include "Argus/Core/Core.h"
+#include "Argus/Core/Base.h"
 
 namespace Argus
 {

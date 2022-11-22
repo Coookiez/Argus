@@ -1,7 +1,6 @@
 #pragma once
 
-#include "Core.h"
-
+#include "Argus/Core/Base.h"
 #include "Argus/Core/Window.h"
 #include "Argus/Core/LayerStack.h"
 #include "Argus/Events/Event.h"

@@ -1,12 +1,12 @@
 #pragma once
 
-#include "Argus/Core/Core.h"
+#include "Argus/Core/Base.h"
 #include "Argus/Core/Timestep.h"
 #include "Argus/Events/Event.h"
 
 namespace Argus
 {
-	class ARGUS_API Layer
+	class Layer
 	{
 	public:
 		Layer(const std::string& name = "Layer");

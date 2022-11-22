@@ -2,6 +2,8 @@
 
 // for use by Argus applications
 
+#include "Argus/Core/Base.h"
+
 #include "Argus/Core/Application.h"
 #include "Argus/Core/Layer.h"
 #include "Argus/Core/Log.h"

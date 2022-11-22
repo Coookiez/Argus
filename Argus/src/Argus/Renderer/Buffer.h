@@ -50,8 +50,8 @@ namespace Argus
 				case Argus::ShaderDataType::Float2:		return 2;
 				case Argus::ShaderDataType::Float3:		return 3;
 				case Argus::ShaderDataType::Float4:		return 4;
-				case Argus::ShaderDataType::Mat3:		return 9;
-				case Argus::ShaderDataType::Mat4:		return 16;
+				case Argus::ShaderDataType::Mat3:		return 3; // 3 * float3
+				case Argus::ShaderDataType::Mat4:		return 4;// 4 * float4
 				case Argus::ShaderDataType::Int:		return 1;
 				case Argus::ShaderDataType::Int2:		return 2;
 				case Argus::ShaderDataType::Int3:		return 3;
