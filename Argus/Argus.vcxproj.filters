@@ -1412,6 +1412,8 @@
     </ClInclude>
     <ClInclude Include="src\Argus\Renderer\Renderer2D.h" />
     <ClInclude Include="src\Argus\Debug\Instrumentor.h" />
+    <ClInclude Include="src\Argus\Renderer\FrameBuffer.h" />
+    <ClInclude Include="src\Platform\OpenGL\OpenGLFrameBuffer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Argus\Core\Application.cpp">
@@ -1491,5 +1493,7 @@
     </ClCompile>
     <ClCompile Include="src\Argus\Renderer\Renderer2D.cpp" />
     <ClCompile Include="src\Argus\Renderer\GraphicsContext.cpp" />
+    <ClCompile Include="src\Argus\Renderer\FrameBuffer.cpp" />
+    <ClCompile Include="src\Platform\OpenGL\OpenGLFrameBuffer.cpp" />
   </ItemGroup>
 </Project>

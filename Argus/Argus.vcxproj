@@ -162,6 +162,7 @@
     <ClInclude Include="src\Argus\Events\MouseEvent.h" />
     <ClInclude Include="src\Argus\ImGui\ImGuiLayer.h" />
     <ClInclude Include="src\Argus\Renderer\Buffer.h" />
+    <ClInclude Include="src\Argus\Renderer\FrameBuffer.h" />
     <ClInclude Include="src\Argus\Renderer\GraphicsContext.h" />
     <ClInclude Include="src\Argus\Renderer\OrthographicCamera.h" />
     <ClInclude Include="src\Argus\Renderer\OrthographicCameraController.h" />
@@ -174,6 +175,7 @@
     <ClInclude Include="src\Argus\Renderer\VertexArray.h" />
     <ClInclude Include="src\Platform\OpenGL\OpenGLBuffer.h" />
     <ClInclude Include="src\Platform\OpenGL\OpenGLContext.h" />
+    <ClInclude Include="src\Platform\OpenGL\OpenGLFrameBuffer.h" />
     <ClInclude Include="src\Platform\OpenGL\OpenGLRendererAPI.h" />
     <ClInclude Include="src\Platform\OpenGL\OpenGLShader.h" />
     <ClInclude Include="src\Platform\OpenGL\OpenGLTexture.h" />
@@ -606,6 +608,7 @@
     <ClCompile Include="src\Argus\ImGui\ImGuiBuild.cpp" />
     <ClCompile Include="src\Argus\ImGui\ImGuiLayer.cpp" />
     <ClCompile Include="src\Argus\Renderer\Buffer.cpp" />
+    <ClCompile Include="src\Argus\Renderer\FrameBuffer.cpp" />
     <ClCompile Include="src\Argus\Renderer\GraphicsContext.cpp" />
     <ClCompile Include="src\Argus\Renderer\OrthographicCamera.cpp" />
     <ClCompile Include="src\Argus\Renderer\OrthographicCameraController.cpp" />
@@ -618,6 +621,7 @@
     <ClCompile Include="src\Argus\Renderer\VertexArray.cpp" />
     <ClCompile Include="src\Platform\OpenGL\OpenGLBuffer.cpp" />
     <ClCompile Include="src\Platform\OpenGL\OpenGLContext.cpp" />
+    <ClCompile Include="src\Platform\OpenGL\OpenGLFrameBuffer.cpp" />
     <ClCompile Include="src\Platform\OpenGL\OpenGLRendererAPI.cpp" />
     <ClCompile Include="src\Platform\OpenGL\OpenGLShader.cpp" />
     <ClCompile Include="src\Platform\OpenGL\OpenGLTexture.cpp" />
