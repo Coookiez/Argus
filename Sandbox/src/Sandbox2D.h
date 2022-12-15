@@ -21,7 +21,7 @@ private:
 	// Temporary
 	Argus::Ref<Argus::VertexArray> m_SquareVA;
 	Argus::Ref<Argus::Shader> m_FlatColorShader;
-	Argus::Ref<Argus::FrameBuffer> m_FrameBuffer;
+
 	Argus::Ref<Argus::Texture2D> m_CheckerboardTexture;
 
 	glm::vec4 m_SquareColor = { 0.2f, 0.3f, 0.8, 1.0f };

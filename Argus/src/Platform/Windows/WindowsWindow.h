@@ -5,8 +5,8 @@
 
 #include <GLFW/glfw3.h>
 
-namespace Argus
-{
+namespace Argus {
+
 	class WindowsWindow : public Window
 	{
 	public:
@@ -24,11 +24,10 @@ namespace Argus
 		bool IsVSync() const override;
 
 		virtual void* GetNativeWindow() const { return m_Window; }
-
 	private:
 		virtual void Init(const WindowProps& props);
 		virtual void Shutdown();
-		 
+
 		GLFWwindow* m_Window;
 		Scope<GraphicsContext> m_Context;
 
@@ -42,7 +41,6 @@ namespace Argus
 		};
 
 		WindowData m_Data;
-
-
 	};
+
 }

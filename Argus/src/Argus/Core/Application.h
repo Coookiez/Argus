@@ -15,7 +15,7 @@ namespace Argus {
 	class Application
 	{
 	public:
-		Application();
+		Application(const std::string& name = "Argus App");
 		virtual ~Application();
 
 		void Run();

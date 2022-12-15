@@ -1,6 +1,7 @@
 #pragma once
 
-#include "Event.h"
+#include "Argus/Events/Event.h"
+#include "Argus/Core/Input.h"
 
 namespace Argus
 {
@@ -53,21 +54,21 @@ namespace Argus
 	class ARGUS_API MouseButtonEvent : public Event
 	{
 	public:
-		int GetMouseButton() const { return m_Button; }
+		MouseCode GetMouseButton() const { return m_Button; }
 
 		EVENT_CLASS_CATEGORY(EventCategoryMouse | EventCategoryInput)
 
 	protected:
-		MouseButtonEvent(int button)
+		MouseButtonEvent(MouseCode button)
 			: m_Button(button){}
 		
-		int m_Button;
+		MouseCode m_Button;
 	};
 
 	class ARGUS_API MouseButtonPressedEvent : public MouseButtonEvent
 	{
 	public:
-		MouseButtonPressedEvent(int button)
+		MouseButtonPressedEvent(MouseCode button)
 			: MouseButtonEvent(button) {}
 
 		std::string ToString() const override
@@ -83,7 +84,7 @@ namespace Argus
 	class ARGUS_API MouseButtonReleasedEvent : public MouseButtonEvent
 	{
 	public:
-		MouseButtonReleasedEvent(int button)
+		MouseButtonReleasedEvent(MouseCode button)
 			: MouseButtonEvent(button) {}
 
 		std::string ToString() const override

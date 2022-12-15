@@ -12,7 +12,7 @@
 
 #include "Argus/Core/Input.h"
 #include "Argus/Core/KeyCodes.h"
-#include "Argus/Core/MouseButtonCodes.h"
+#include "Argus/Core/MouseCodes.h"
 #include "Argus/Renderer/OrthographicCameraController.h"
 
 #include "Argus/ImGui/ImGuiLayer.h"

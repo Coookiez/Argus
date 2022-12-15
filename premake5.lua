@@ -1,5 +1,5 @@
 workspace "Argus"
-	architecture "x64"
+	architecture "x86_64"
 	startproject "Sandbox"
 
 	configurations
@@ -7,6 +7,11 @@ workspace "Argus"
 		"Debug",
 		"Release",
 		"Dist"
+	}
+
+	flags
+	{
+		"MultiProcessorCompile"
 	}
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
@@ -130,6 +135,59 @@ project "Sandbox"
 	filter "system:windows"
 		systemversion "latest"
 
+		defines
+		{
+			"AS_PLATFORM_WINDOWS"
+		}
+
+	filter "configurations:Debug"
+		defines "AS_DEBUG"
+		runtime "Debug"
+		symbols "on"
+
+	filter "configurations:Release"
+		defines "AS_RELEASE"
+		runtime "Release"
+		optimize "on"
+
+	filter "configurations:Dist"
+		defines "AS_DIST"
+		runtime "Release"
+		optimize "on"
+
+		
+project "Argus-Editor"
+	location "Argus-Editor"
+	kind "ConsoleApp"
+	language "C++"
+	cppdialect "C++17"
+	staticruntime "on"
+
+	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
+	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
+
+	files
+	{
+		"%{prj.name}/src/**.h",
+		"%{prj.name}/src/**.cpp"
+	}
+
+	includedirs
+	{
+		"Argus/vendor/spdlog/include",
+		"Argus/src",
+		"Argus/vendor",
+		"%{IncludeDir.glm}"
+	}
+
+	links
+	{
+		"Argus"
+	}
+
+	filter "system:windows"
+		systemversion "latest"
+		
 		defines
 		{
 			"AS_PLATFORM_WINDOWS"

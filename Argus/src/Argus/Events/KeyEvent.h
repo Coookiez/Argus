@@ -1,27 +1,27 @@
 #pragma once
 
-#include "Event.h"
+#include "Argus/Events/Event.h"
+#include "Argus/Core/Input.h"
 
-namespace Argus
-{
-	class ARGUS_API KeyEvent : public Event
+namespace Argus {
+
+	class KeyEvent : public Event
 	{
 	public:
-		int GetKeyCode() const { return m_KeyCode; }
+		KeyCode GetKeyCode() const { return m_KeyCode; }
 
 		EVENT_CLASS_CATEGORY(EventCategoryKeyboard | EventCategoryInput)
-
 	protected:
-		KeyEvent(int keycode)
+		KeyEvent(KeyCode keycode)
 			: m_KeyCode(keycode) {}
 
-		int m_KeyCode;
+		KeyCode m_KeyCode;
 	};
 
-	class ARGUS_API KeyPressedEvent : public KeyEvent
+	class KeyPressedEvent : public KeyEvent
 	{
 	public:
-		KeyPressedEvent(int keycode, int repeatCount)
+		KeyPressedEvent(KeyCode keycode, int repeatCount)
 			: KeyEvent(keycode), m_RepeatCount(repeatCount) {}
 
 		int GetRepeatCount() const { return m_RepeatCount; }
@@ -34,15 +34,14 @@ namespace Argus
 		}
 
 		EVENT_CLASS_TYPE(KeyPressed)
-
 	private:
 		int m_RepeatCount;
 	};
 
-	class ARGUS_API KeyReleasedEvent : public KeyEvent
+	class KeyReleasedEvent : public KeyEvent
 	{
 	public:
-		KeyReleasedEvent(int keycode)
+		KeyReleasedEvent(KeyCode keycode)
 			: KeyEvent(keycode) {}
 
 		std::string ToString() const override
@@ -55,10 +54,10 @@ namespace Argus
 		EVENT_CLASS_TYPE(KeyReleased)
 	};
 
-	class ARGUS_API KeyTypedEvent : public KeyEvent
+	class KeyTypedEvent : public KeyEvent
 	{
 	public:
-		KeyTypedEvent(int keycode)
+		KeyTypedEvent(KeyCode keycode)
 			: KeyEvent(keycode) {}
 
 		std::string ToString() const override
