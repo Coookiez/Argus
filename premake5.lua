@@ -1,6 +1,6 @@
 workspace "Argus"
 	architecture "x86_64"
-	startproject "Sandbox"
+	startproject "Argus-Editor"
 
 	configurations
 	{
