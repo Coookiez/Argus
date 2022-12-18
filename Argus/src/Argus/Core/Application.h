@@ -25,11 +25,13 @@ namespace Argus {
 		void PushLayer(Layer* layer);
 		void PushOverlay(Layer* layer);
 
-		static Application& Get() { return *s_Instance; }
 		Window& GetWindow() { return *m_Window; }
 
 		void Close();
 
+		ImGuiLayer* GetImGuiLayer() { return m_ImGuiLayer; }
+
+		static Application& Get() { return *s_Instance; }
 	private:
 		bool OnWindowClose(WindowCloseEvent& e);
 		bool OnWindowResize(WindowResizeEvent& e);

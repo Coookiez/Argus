@@ -18,7 +18,7 @@ int main(int argc, char** argv)
 	app->Run();
 	AS_PROFILE_END_SESSION();
 	
-	AS_PROFILE_BEGIN_SESSION("Startup", "ArgusProfile-Shutdown.json");
+	AS_PROFILE_BEGIN_SESSION("Shutdown", "ArgusProfile-Shutdown.json");
 	delete app;
 	AS_PROFILE_END_SESSION();
 
