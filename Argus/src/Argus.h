@@ -17,6 +17,9 @@
 
 #include "Argus/ImGui/ImGuiLayer.h"
 
+#include "Argus/Scene/Scene.h"
+#include "Argus/Scene/Components.h"
+
 //  --- Renderer ---------------
 
 #include "Argus/Renderer/Renderer.h"

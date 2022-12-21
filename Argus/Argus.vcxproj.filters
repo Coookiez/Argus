@@ -22,6 +22,9 @@
     <Filter Include="src\Argus\Renderer">
       <UniqueIdentifier>{84D57EBA-70B9-3F10-D919-3A63C51C2A92}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Argus\Scene">
+      <UniqueIdentifier>{BB1BCC8C-27A7-3951-30B8-BC459CC29551}</UniqueIdentifier>
+    </Filter>
     <Filter Include="src\Platform">
       <UniqueIdentifier>{21CA02E5-0D2D-9289-B6B2-CA3FA2F45D0C}</UniqueIdentifier>
     </Filter>
@@ -84,6 +87,9 @@
     <ClInclude Include="src\Argus\Core\Log.h">
       <Filter>src\Argus\Core</Filter>
     </ClInclude>
+    <ClInclude Include="src\Argus\Core\MouseCodes.h">
+      <Filter>src\Argus\Core</Filter>
+    </ClInclude>
     <ClInclude Include="src\Argus\Core\Timestep.h">
       <Filter>src\Argus\Core</Filter>
     </ClInclude>
@@ -143,6 +149,9 @@
     </ClInclude>
     <ClInclude Include="src\Argus\Renderer\VertexArray.h">
       <Filter>src\Argus\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Argus\Scene\Scene.h">
+      <Filter>src\Argus\Scene</Filter>
     </ClInclude>
     <ClInclude Include="src\Platform\OpenGL\OpenGLBuffer.h">
       <Filter>src\Platform\OpenGL</Filter>
@@ -1419,7 +1428,7 @@
     <ClInclude Include="vendor\stb_image\stb_image.h">
       <Filter>vendor\stb_image</Filter>
     </ClInclude>
-    <ClInclude Include="src\Argus\Core\MouseCodes.h" />
+    <ClInclude Include="src\Argus\Scene\Components.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Argus\Core\Application.cpp">
@@ -1432,6 +1441,9 @@
       <Filter>src\Argus\Core</Filter>
     </ClCompile>
     <ClCompile Include="src\Argus\Core\Log.cpp">
+      <Filter>src\Argus\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Argus\Core\Window.cpp">
       <Filter>src\Argus\Core</Filter>
     </ClCompile>
     <ClCompile Include="src\Argus\ImGui\ImGuiBuild.cpp">
@@ -1476,6 +1488,9 @@
     <ClCompile Include="src\Argus\Renderer\VertexArray.cpp">
       <Filter>src\Argus\Renderer</Filter>
     </ClCompile>
+    <ClCompile Include="src\Argus\Scene\Scene.cpp">
+      <Filter>src\Argus\Scene</Filter>
+    </ClCompile>
     <ClCompile Include="src\Platform\OpenGL\OpenGLBuffer.cpp">
       <Filter>src\Platform\OpenGL</Filter>
     </ClCompile>
@@ -1509,6 +1524,5 @@
     <ClCompile Include="vendor\stb_image\stb_image.cpp">
       <Filter>vendor\stb_image</Filter>
     </ClCompile>
-    <ClCompile Include="src\Argus\Core\Window.cpp" />
   </ItemGroup>
 </Project>

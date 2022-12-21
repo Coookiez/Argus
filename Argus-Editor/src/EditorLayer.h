@@ -1,7 +1,6 @@
 #pragma once
 
 #include "Argus.h"
-#include "Argus/Renderer/OrthographicCameraController.h"
 
 namespace Argus
 {
@@ -19,12 +18,15 @@ namespace Argus
 		void OnEvent(Event& e) override;
 
 	private:
-		Argus::OrthographicCameraController m_CameraController;
+		OrthographicCameraController m_CameraController;
 
 		// Temp
 		Ref<VertexArray> m_SquareVA;
 		Ref<Shader> m_FlatColorShader;
 		Ref<FrameBuffer> m_Framebuffer;
+
+		Ref<Scene> m_ActiveScene;
+		entt::entity m_SquareEntity;
 
 		Ref<Texture2D> m_CheckerboardTexture;
 

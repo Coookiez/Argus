@@ -23,6 +23,7 @@ IncludeDir["Glad"] = "Argus/vendor/Glad/include"
 IncludeDir["ImGui"] = "Argus/vendor/imgui"
 IncludeDir["glm"] = "Argus/vendor/glm"
 IncludeDir["stb_image"] = "Argus/vendor/stb_image"
+IncludeDir["entt"] = "Argus/vendor/entt/include"
 
 group "Dependencies"
 	include "Argus/vendor/GLFW"  
@@ -67,7 +68,8 @@ project "Argus"
 		"%{IncludeDir.Glad}",
 		"%{IncludeDir.ImGui}",
 		"%{IncludeDir.glm}",
-		"%{IncludeDir.stb_image}"
+		"%{IncludeDir.stb_image}",
+		"%{IncludeDir.entt}"
 	}
 
 	links
@@ -124,7 +126,9 @@ project "Sandbox"
 		"Argus/vendor/spdlog/include",
 		"Argus/src",
 		"Argus/vendor",
-		"%{IncludeDir.glm}"
+		"%{IncludeDir.glm}",
+		"%{IncludeDir.entt}"
+
 	}
 
 	links
@@ -177,7 +181,8 @@ project "Argus-Editor"
 		"Argus/vendor/spdlog/include",
 		"Argus/src",
 		"Argus/vendor",
-		"%{IncludeDir.glm}"
+		"%{IncludeDir.glm}",
+		"%{IncludeDir.entt}"
 	}
 
 	links

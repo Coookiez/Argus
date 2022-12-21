@@ -10,7 +10,13 @@ Sandbox/ArgusProfile-Runtime.json
 Sandbox/ArgusProfile-Shutdown.json
 Sandbox/ArgusProfile-Startup.json
 
+# Argus files
+*.log
+
 # Visual Studio files and folder
 .vs/
-*.sln
-*.vcxproj*
+**.sln
+**.vcxproj
+**.vcxproj.filters
+**.vcxproj.user
+**.csproj
