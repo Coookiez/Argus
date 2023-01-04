@@ -20,3 +20,6 @@ Sandbox/ArgusProfile-Startup.json
 **.vcxproj.filters
 **.vcxproj.user
 **.csproj
+Argus-Editor/ArgusProfile-Runtime.json
+Argus-Editor/ArgusProfile-Shutdown.json
+Argus-Editor/ArgusProfile-Startup.json

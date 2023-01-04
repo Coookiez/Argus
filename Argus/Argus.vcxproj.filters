@@ -1430,6 +1430,7 @@
     </ClInclude>
     <ClInclude Include="src\Argus\Scene\Components.h" />
     <ClInclude Include="src\Argus\Scene\Entity.h" />
+    <ClInclude Include="src\Argus\Renderer\Camera.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Argus\Core\Application.cpp">

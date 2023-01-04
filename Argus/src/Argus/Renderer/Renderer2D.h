@@ -1,5 +1,6 @@
 #pragma once
 
+#include "Argus/Renderer/Camera.h"
 #include "Argus/Renderer/OrthographicCamera.h"
 #include "Argus/Renderer/Texture.h"
 
@@ -11,6 +12,7 @@ namespace Argus
 		static void Init();
 		static void Shutdown();
 
+		static void BeginScene(const Camera& camera, const glm::mat4& transform);
 		static void BeginScene(const OrthographicCamera& camera);
 		static void EndScene();
 		static void Flush();

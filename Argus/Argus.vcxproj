@@ -148,6 +148,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="src\Argus.h" />
+    <ClInclude Include="src\Argus\Renderer\Camera.h" />
     <ClInclude Include="src\Argus\Core\Application.h" />
     <ClInclude Include="src\Argus\Core\Base.h" />
     <ClInclude Include="src\Argus\Core\EntryPoint.h" />
