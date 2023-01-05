@@ -181,6 +181,7 @@
     <ClInclude Include="src\Argus\Scene\Components.h" />
     <ClInclude Include="src\Argus\Scene\Entity.h" />
     <ClInclude Include="src\Argus\Scene\Scene.h" />
+    <ClInclude Include="src\Argus\Scene\SceneCamera.h" />
     <ClInclude Include="src\Platform\OpenGL\OpenGLBuffer.h" />
     <ClInclude Include="src\Platform\OpenGL\OpenGLContext.h" />
     <ClInclude Include="src\Platform\OpenGL\OpenGLFrameBuffer.h" />
@@ -629,6 +630,7 @@
     <ClCompile Include="src\Argus\Renderer\VertexArray.cpp" />
     <ClCompile Include="src\Argus\Scene\Entity.cpp" />
     <ClCompile Include="src\Argus\Scene\Scene.cpp" />
+    <ClCompile Include="src\Argus\Scene\SceneCamera.cpp" />
     <ClCompile Include="src\Platform\OpenGL\OpenGLBuffer.cpp" />
     <ClCompile Include="src\Platform\OpenGL\OpenGLContext.cpp" />
     <ClCompile Include="src\Platform\OpenGL\OpenGLFrameBuffer.cpp" />

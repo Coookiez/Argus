@@ -1,7 +1,7 @@
 #pragma once
 
 #include <glm/glm.hpp>
-#include "Argus/Renderer/Camera.h"
+#include "Argus/Scene/SceneCamera.h"
 
 namespace Argus {
 
@@ -40,13 +40,13 @@ namespace Argus {
 
 	struct CameraComponent
 	{
-		Argus::Camera Camera;
+		SceneCamera Camera;
 		bool Primary = true;
+		bool FixedAspectRatio = false;
+
 
 		CameraComponent() = default;
 		CameraComponent(const CameraComponent&) = default;
-		CameraComponent(const glm::mat4& projection)
-			: Camera(projection) {}
 	};
 
 }
