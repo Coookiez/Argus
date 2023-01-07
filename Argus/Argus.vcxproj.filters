@@ -1432,6 +1432,7 @@
     <ClInclude Include="src\Argus\Scene\Entity.h" />
     <ClInclude Include="src\Argus\Renderer\Camera.h" />
     <ClInclude Include="src\Argus\Scene\SceneCamera.h" />
+    <ClInclude Include="src\Argus\Scene\ScriptableEntity.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Argus\Core\Application.cpp">

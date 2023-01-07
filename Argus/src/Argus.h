@@ -19,6 +19,7 @@
 
 #include "Argus/Scene/Scene.h"
 #include "Argus/Scene/Entity.h"
+#include "Argus/Scene/ScriptableEntity.h"
 #include "Argus/Scene/Components.h"
 
 //  --- Renderer ---------------
