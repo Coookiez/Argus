@@ -1,12 +1,12 @@
 [submodule "Argus/vendor/spdlog"]
 	path = Argus/vendor/spdlog
-	url = https://github.com/gabime/spdlog
+	url = ../../gabime/spdlog.git
 [submodule "Argus/vendor/GLFW"]
 	path = Argus/vendor/GLFW
-	url = https://github.com/TheCherno/GLFW
+	url = ../../TheCherno/glfw.git
 [submodule "Argus/vendor/imgui"]
 	path = Argus/vendor/imgui
-	url = https://github.com/TheCherno/imgui
+	url = ../../TheCherno/imgui.git
 [submodule "Argus/vendor/glm"]
 	path = Argus/vendor/glm
-	url = https://github.com/g-truc/glm
+	url = ../../g-truc/glm.git

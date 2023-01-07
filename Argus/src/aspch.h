@@ -12,6 +12,8 @@
 #include <unordered_map>
 #include <unordered_set>
 
+#include "Argus/Core/Base.h"
+
 #include "Argus/Core/Log.h"
 
 #include "Argus/Debug/Instrumentor.h"

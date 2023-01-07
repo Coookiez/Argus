@@ -1,6 +1,6 @@
 #pragma once
 
-#include "aspch.h"
+#include <sstream>
 
 #include "Argus/Core/Base.h"
 #include "Argus/Events/Event.h"

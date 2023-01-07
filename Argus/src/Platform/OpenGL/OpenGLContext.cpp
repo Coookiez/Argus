@@ -24,6 +24,8 @@ namespace Argus
 		AS_CORE_INFO("  Vendor : {0}", glGetString(GL_VENDOR));
 		AS_CORE_INFO("  Renderer: {0}", glGetString(GL_RENDERER));
 		AS_CORE_INFO("  Version: {0}",  glGetString(GL_VERSION));
+
+		AS_CORE_ASSERT(GLVersion.major > 4 || (GLVersion.major == 4 && GLVersion.minor >= 5), "Argus requires at least OpenGL version 4.5!");
 	}
 
 	void OpenGLContext::SwapBuffers()

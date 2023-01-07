@@ -1,7 +1,8 @@
 #pragma once
 
-#include "aspch.h"
+#include <functional>
 
+#include "Argus/Debug/Instrumentor.h"
 #include "Argus/Core/Base.h"
 
 namespace Argus
