@@ -217,6 +217,9 @@ namespace Argus
 		ImGui::SameLine();
 		ImGui::PushItemWidth(-1);
 
+		if (ImGui::Button("Add Component"))
+			ImGui::OpenPopup("AddComponent");
+
 		if (ImGui::BeginPopup("AddComponent"))
 		{
 			if (ImGui::MenuItem("Camera"))
