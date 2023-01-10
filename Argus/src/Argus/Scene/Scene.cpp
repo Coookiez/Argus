@@ -50,7 +50,7 @@ namespace Argus
 		
 		// Render 2D
 		Camera* mainCamera = nullptr;
-		glm::mat4 cameraTransform;
+		glm::mat4* cameraTransform = nullptr;
 		{
 			auto view = m_Registry.view<CameraComponent, TransformComponent>();
 			for (auto entity : view)
@@ -60,7 +60,7 @@ namespace Argus
 				if (camera.Primary)
 				{
 					mainCamera = &camera.Camera;
-					cameraTransform = transform.GetTransform();
+					cameraTransform = &transform.GetTransform();
 					break;
 				}
 			}
@@ -68,7 +68,7 @@ namespace Argus
 
 		if (mainCamera)
 		{
-			Renderer2D::BeginScene(mainCamera->GetProjection(), cameraTransform);
+			Renderer2D::BeginScene(*mainCamera, *cameraTransform);
 
 			auto group = m_Registry.group<TransformComponent>(entt::get<SpriteRendererComponent>);
 			for (auto entity : group)

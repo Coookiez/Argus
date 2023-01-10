@@ -1,8 +1,10 @@
 #pragma once
 
 #include "Argus/Core/Base.h"
+#pragma warning(push, 0)
 #include "spdlog/spdlog.h"
 #include "spdlog/fmt/ostr.h"
+#pragma warning(pop)
 
 namespace Argus {
 	
@@ -26,11 +28,11 @@ namespace Argus {
 #define AS_CORE_INFO(...)		::Argus::Log::GetCoreLogger()->info(__VA_ARGS__) 
 #define AS_CORE_WARN(...)		::Argus::Log::GetCoreLogger()->warn(__VA_ARGS__) 
 #define AS_CORE_ERROR(...)		::Argus::Log::GetCoreLogger()->error(__VA_ARGS__) 
-#define AS_CORE_FATAL(...)		::Argus::Log::GetCoreLogger()->fatal(__VA_ARGS__) 
+#define AS_CORE_CRITICAL(...)	::Argus::Log::GetCoreLogger()->critical(__VA_ARGS__)
 
 // Client log macros
 #define AS_TRACE(...)			::Argus::Log::GetClientLogger()->trace(__VA_ARGS__) 
 #define AS_INFO(...)			::Argus::Log::GetClientLogger()->info(__VA_ARGS__) 
 #define AS_WARN(...)			::Argus::Log::GetClientLogger()->warn(__VA_ARGS__)
 #define AS_ERROR(...)			::Argus::Log::GetClientLogger()->error(__VA_ARGS__)
-#define AS_FATAL(...)			::Argus::Log::GetClientLogger()->fatal(__VA_ARGS__)
+#define AS_CRITICAL(...)		::Argus::Log::GetClientLogger()->critical(__VA_ARGS__)

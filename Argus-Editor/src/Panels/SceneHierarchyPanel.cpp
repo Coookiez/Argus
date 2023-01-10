@@ -274,9 +274,9 @@ namespace Argus
 
 			if (camera.GetProjectionType() == SceneCamera::ProjectionType::Perspective)
 			{
-				float verticalFOV = glm::degrees(camera.GetPerspectiveVerticalFOV());
-				if (ImGui::DragFloat("FOV", &verticalFOV))
-					camera.SetPerspectiveVerticalFOV(glm::radians(verticalFOV));
+				float perspectiveVerticalFOV = glm::degrees(camera.GetPerspectiveVerticalFOV());
+				if (ImGui::DragFloat("FOV", &perspectiveVerticalFOV))
+					camera.SetPerspectiveVerticalFOV(glm::radians(perspectiveVerticalFOV));
 
 				float perspectiveNear = camera.GetPerspectiveNearClip();
 				if (ImGui::DragFloat("Near", &perspectiveNear))
