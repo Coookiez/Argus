@@ -10,12 +10,12 @@ namespace Argus {
 	struct WindowProps
 	{
 		std::string Title;
-		unsigned int Width;
-		unsigned int Height;
+		uint32_t Width;
+		uint32_t Height;
 
 		WindowProps(const std::string& title = "Argus Engine",
-			unsigned int width = 1280,
-			unsigned int height = 720)
+			unsigned int width = 1600,
+			unsigned int height = 900)
 			: Title(title), Width(width), Height(height)
 		{
 		}
