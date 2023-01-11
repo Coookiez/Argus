@@ -7,6 +7,7 @@
 #include "Argus/Core/Application.h"
 #include "Argus/Core/Layer.h"
 #include "Argus/Core/Log.h"
+#include "Argus/Core/Assert.h"
 
 #include "Argus/Core/Timestep.h"
 

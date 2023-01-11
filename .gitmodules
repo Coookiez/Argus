@@ -10,3 +10,6 @@
 [submodule "Argus/vendor/glm"]
 	path = Argus/vendor/glm
 	url = ../../g-truc/glm.git
+[submodule "Argus/vendor/yaml-cpp"]
+	path = Argus/vendor/yaml-cpp
+	url = https://github.com/thecherno/yaml-cpp

@@ -5,7 +5,7 @@
 
 namespace Argus
 {
-	class ARGUS_API MouseMovedEvent : public Event
+	class MouseMovedEvent : public Event
 	{
 	public:
 		MouseMovedEvent(const float x,const float y)
@@ -28,7 +28,7 @@ namespace Argus
 		float m_MouseX, m_MouseY;
 	};
 
-	class ARGUS_API MouseScrolledEvent : public Event
+	class MouseScrolledEvent : public Event
 	{
 	public:
 		MouseScrolledEvent(const float xOffset, const float yOffset)
@@ -51,7 +51,7 @@ namespace Argus
 		float m_XOffset, m_YOffset;
 	};
 
-	class ARGUS_API MouseButtonEvent : public Event
+	class MouseButtonEvent : public Event
 	{
 	public:
 		MouseCode GetMouseButton() const { return m_Button; }
@@ -65,7 +65,7 @@ namespace Argus
 		MouseCode m_Button;
 	};
 
-	class ARGUS_API MouseButtonPressedEvent : public MouseButtonEvent
+	class MouseButtonPressedEvent : public MouseButtonEvent
 	{
 	public:
 		MouseButtonPressedEvent(const MouseCode button)
@@ -81,7 +81,7 @@ namespace Argus
 		EVENT_CLASS_TYPE(MouseButtonPressed)
 	};
 
-	class ARGUS_API MouseButtonReleasedEvent : public MouseButtonEvent
+	class MouseButtonReleasedEvent : public MouseButtonEvent
 	{
 	public:
 		MouseButtonReleasedEvent(const MouseCode button)

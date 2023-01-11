@@ -66,6 +66,9 @@
     <ClInclude Include="src\Argus\Core\Application.h">
       <Filter>src\Argus\Core</Filter>
     </ClInclude>
+    <ClInclude Include="src\Argus\Core\Assert.h">
+      <Filter>src\Argus\Core</Filter>
+    </ClInclude>
     <ClInclude Include="src\Argus\Core\Base.h">
       <Filter>src\Argus\Core</Filter>
     </ClInclude>
@@ -88,6 +91,9 @@
       <Filter>src\Argus\Core</Filter>
     </ClInclude>
     <ClInclude Include="src\Argus\Core\MouseCodes.h">
+      <Filter>src\Argus\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Argus\Core\PlatformDetection.h">
       <Filter>src\Argus\Core</Filter>
     </ClInclude>
     <ClInclude Include="src\Argus\Core\Timestep.h">
@@ -115,6 +121,9 @@
       <Filter>src\Argus\ImGui</Filter>
     </ClInclude>
     <ClInclude Include="src\Argus\Renderer\Buffer.h">
+      <Filter>src\Argus\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Argus\Renderer\Camera.h">
       <Filter>src\Argus\Renderer</Filter>
     </ClInclude>
     <ClInclude Include="src\Argus\Renderer\FrameBuffer.h">
@@ -150,7 +159,22 @@
     <ClInclude Include="src\Argus\Renderer\VertexArray.h">
       <Filter>src\Argus\Renderer</Filter>
     </ClInclude>
+    <ClInclude Include="src\Argus\Scene\Components.h">
+      <Filter>src\Argus\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Argus\Scene\Entity.h">
+      <Filter>src\Argus\Scene</Filter>
+    </ClInclude>
     <ClInclude Include="src\Argus\Scene\Scene.h">
+      <Filter>src\Argus\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Argus\Scene\SceneCamera.h">
+      <Filter>src\Argus\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Argus\Scene\SceneSerializer.h">
+      <Filter>src\Argus\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Argus\Scene\ScriptableEntity.h">
       <Filter>src\Argus\Scene</Filter>
     </ClInclude>
     <ClInclude Include="src\Platform\OpenGL\OpenGLBuffer.h">
@@ -1428,11 +1452,6 @@
     <ClInclude Include="vendor\stb_image\stb_image.h">
       <Filter>vendor\stb_image</Filter>
     </ClInclude>
-    <ClInclude Include="src\Argus\Scene\Components.h" />
-    <ClInclude Include="src\Argus\Scene\Entity.h" />
-    <ClInclude Include="src\Argus\Renderer\Camera.h" />
-    <ClInclude Include="src\Argus\Scene\SceneCamera.h" />
-    <ClInclude Include="src\Argus\Scene\ScriptableEntity.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Argus\Core\Application.cpp">
@@ -1492,7 +1511,16 @@
     <ClCompile Include="src\Argus\Renderer\VertexArray.cpp">
       <Filter>src\Argus\Renderer</Filter>
     </ClCompile>
+    <ClCompile Include="src\Argus\Scene\Entity.cpp">
+      <Filter>src\Argus\Scene</Filter>
+    </ClCompile>
     <ClCompile Include="src\Argus\Scene\Scene.cpp">
+      <Filter>src\Argus\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Argus\Scene\SceneCamera.cpp">
+      <Filter>src\Argus\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Argus\Scene\SceneSerializer.cpp">
       <Filter>src\Argus\Scene</Filter>
     </ClCompile>
     <ClCompile Include="src\Platform\OpenGL\OpenGLBuffer.cpp">
@@ -1528,7 +1556,5 @@
     <ClCompile Include="vendor\stb_image\stb_image.cpp">
       <Filter>vendor\stb_image</Filter>
     </ClCompile>
-    <ClCompile Include="src\Argus\Scene\Entity.cpp" />
-    <ClCompile Include="src\Argus\Scene\SceneCamera.cpp" />
   </ItemGroup>
 </Project>
