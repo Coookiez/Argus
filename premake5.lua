@@ -32,6 +32,7 @@ IncludeDir["glm"] = "%{wks.location}/Argus/vendor/glm"
 IncludeDir["stb_image"] = "%{wks.location}/Argus/vendor/stb_image"
 IncludeDir["entt"] = "%{wks.location}/Argus/vendor/entt/include"
 IncludeDir["yaml_cpp"] = "%{wks.location}/Argus/vendor/yaml-cpp/include"
+IncludeDir["ImGuizmo"] = "%{wks.location}/Argus/vendor/ImGuizmo"
 
 group "Dependencies"
 	include "vendor/premake"

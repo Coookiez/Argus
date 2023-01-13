@@ -13,3 +13,6 @@
 [submodule "Argus/vendor/yaml-cpp"]
 	path = Argus/vendor/yaml-cpp
 	url = https://github.com/thecherno/yaml-cpp
+[submodule "Argus/vendor/ImGuizmo"]
+	path = Argus/vendor/ImGuizmo
+	url = https://github.com/thecherno/imguizmo

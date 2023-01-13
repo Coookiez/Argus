@@ -19,7 +19,8 @@ project "Argus-Editor"
 		"%{wks.location}/Argus/src",
 		"%{wks.location}/Argus/vendor",
 		"%{IncludeDir.glm}",
-		"%{IncludeDir.entt}"
+		"%{IncludeDir.entt}",
+		"%{IncludeDir.ImGuizmo}"
 	}
 
 	links

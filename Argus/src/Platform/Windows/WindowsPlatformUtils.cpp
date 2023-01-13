@@ -48,6 +48,6 @@ namespace Argus
 		{
 			return ofn.lpstrFile;
 		}
-		return std::nullopt
+		return std::nullopt;
 	}
 }
