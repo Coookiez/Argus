@@ -3,6 +3,7 @@
 #include "Argus/Renderer/Camera.h"
 #include "Argus/Renderer/OrthographicCamera.h"
 #include "Argus/Renderer/Texture.h"
+#include "Argus/Renderer/EditorCamera.h"
 
 namespace Argus
 {
@@ -13,6 +14,7 @@ namespace Argus
 		static void Shutdown();
 
 		static void BeginScene(const Camera& camera, const glm::mat4& transform);
+		static void BeginScene(const EditorCamera& camera);
 		static void BeginScene(const OrthographicCamera& camera);
 		static void EndScene();
 		static void Flush();

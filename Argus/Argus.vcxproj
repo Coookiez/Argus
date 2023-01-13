@@ -170,6 +170,7 @@
     <ClInclude Include="src\Argus\Math\Math.h" />
     <ClInclude Include="src\Argus\Renderer\Buffer.h" />
     <ClInclude Include="src\Argus\Renderer\Camera.h" />
+    <ClInclude Include="src\Argus\Renderer\EditorCamera.h" />
     <ClInclude Include="src\Argus\Renderer\FrameBuffer.h" />
     <ClInclude Include="src\Argus\Renderer\GraphicsContext.h" />
     <ClInclude Include="src\Argus\Renderer\OrthographicCamera.h" />
@@ -625,6 +626,7 @@
     <ClCompile Include="src\Argus\ImGui\ImGuiLayer.cpp" />
     <ClCompile Include="src\Argus\Math\Math.cpp" />
     <ClCompile Include="src\Argus\Renderer\Buffer.cpp" />
+    <ClCompile Include="src\Argus\Renderer\EditorCamera.cpp" />
     <ClCompile Include="src\Argus\Renderer\FrameBuffer.cpp" />
     <ClCompile Include="src\Argus\Renderer\GraphicsContext.cpp" />
     <ClCompile Include="src\Argus\Renderer\OrthographicCamera.cpp" />

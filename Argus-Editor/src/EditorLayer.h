@@ -2,6 +2,7 @@
 
 #include "Argus.h"
 
+#include "Argus/Renderer/EditorCamera.h"
 #include "Panels/SceneHierarchyPanel.h"
 
 namespace Argus
@@ -37,6 +38,8 @@ namespace Argus
 		Entity m_SecondCamera;
 
 		bool m_PrimaryCamera = true;
+
+		EditorCamera m_EditorCamera;
 
 		Ref<Texture2D> m_CheckerboardTexture;
 

@@ -3,6 +3,7 @@
 #include "entt.hpp"
 
 #include "Argus/Core/Timestep.h"
+#include "Argus/Renderer/EditorCamera.h"
 
 namespace Argus
 {
@@ -21,7 +22,8 @@ namespace Argus
 		// TEMP
 		entt::registry& Reg() { return m_Registry; }
 
-		void OnUpdate(Timestep ts);
+		void OnUpdateRuntime(Timestep ts);
+		void OnUpdateEditor(Timestep ts, EditorCamera& camera);
 		void OnViewportResize(uint32_t width, uint32_t height);
 
 	private:

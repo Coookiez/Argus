@@ -1465,6 +1465,7 @@
       <Filter>vendor\stb_image</Filter>
     </ClInclude>
     <ClInclude Include="src\Argus\Math\Math.h" />
+    <ClInclude Include="src\Argus\Renderer\EditorCamera.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Argus\Core\Application.cpp">
@@ -1576,5 +1577,6 @@
       <Filter>vendor\stb_image</Filter>
     </ClCompile>
     <ClCompile Include="src\Argus\Math\Math.cpp" />
+    <ClCompile Include="src\Argus\Renderer\EditorCamera.cpp" />
   </ItemGroup>
 </Project>
