@@ -19,6 +19,9 @@
     <Filter Include="src\Argus\ImGui">
       <UniqueIdentifier>{C8231C8C-34AF-8950-3DC0-0C45A9CAE550}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Argus\Math">
+      <UniqueIdentifier>{B7B7679F-A385-5BA5-8C19-CCCB7886370A}</UniqueIdentifier>
+    </Filter>
     <Filter Include="src\Argus\Renderer">
       <UniqueIdentifier>{84D57EBA-70B9-3F10-D919-3A63C51C2A92}</UniqueIdentifier>
     </Filter>
@@ -126,10 +129,16 @@
     <ClInclude Include="src\Argus\ImGui\ImGuiLayer.h">
       <Filter>src\Argus\ImGui</Filter>
     </ClInclude>
+    <ClInclude Include="src\Argus\Math\Math.h">
+      <Filter>src\Argus\Math</Filter>
+    </ClInclude>
     <ClInclude Include="src\Argus\Renderer\Buffer.h">
       <Filter>src\Argus\Renderer</Filter>
     </ClInclude>
     <ClInclude Include="src\Argus\Renderer\Camera.h">
+      <Filter>src\Argus\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Argus\Renderer\EditorCamera.h">
       <Filter>src\Argus\Renderer</Filter>
     </ClInclude>
     <ClInclude Include="src\Argus\Renderer\FrameBuffer.h">
@@ -1464,8 +1473,9 @@
     <ClInclude Include="vendor\stb_image\stb_image.h">
       <Filter>vendor\stb_image</Filter>
     </ClInclude>
-    <ClInclude Include="src\Argus\Math\Math.h" />
-    <ClInclude Include="src\Argus\Renderer\EditorCamera.h" />
+    <ClInclude Include="src\Argus\Core\Timer.h" />
+    <ClInclude Include="src\Argus\Renderer\UniformBuffer.h" />
+    <ClInclude Include="src\Platform\OpenGL\OpenGLUniformBuffer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Argus\Core\Application.cpp">
@@ -1489,7 +1499,13 @@
     <ClCompile Include="src\Argus\ImGui\ImGuiLayer.cpp">
       <Filter>src\Argus\ImGui</Filter>
     </ClCompile>
+    <ClCompile Include="src\Argus\Math\Math.cpp">
+      <Filter>src\Argus\Math</Filter>
+    </ClCompile>
     <ClCompile Include="src\Argus\Renderer\Buffer.cpp">
+      <Filter>src\Argus\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Argus\Renderer\EditorCamera.cpp">
       <Filter>src\Argus\Renderer</Filter>
     </ClCompile>
     <ClCompile Include="src\Argus\Renderer\FrameBuffer.cpp">
@@ -1576,7 +1592,7 @@
     <ClCompile Include="vendor\stb_image\stb_image.cpp">
       <Filter>vendor\stb_image</Filter>
     </ClCompile>
-    <ClCompile Include="src\Argus\Math\Math.cpp" />
-    <ClCompile Include="src\Argus\Renderer\EditorCamera.cpp" />
+    <ClCompile Include="src\Argus\Renderer\UniformBuffer.cpp" />
+    <ClCompile Include="src\Platform\OpenGL\OpenGLUniformBuffer.cpp" />
   </ItemGroup>
 </Project>

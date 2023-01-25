@@ -1,17 +1,18 @@
 #pragma once
 
 #include "Argus/Core/Base.h"
+#include "Argus/Core/Application.h"
 
 #ifdef AS_PLATFORM_WINDOWS
 
-extern Argus::Application* Argus::CreateApplication();
+extern Argus::Application* Argus::CreateApplication(ApplicationCommandLineArgs args);
 
 int main(int argc, char** argv)
 {
 	Argus::Log::Init();
 
 	AS_PROFILE_BEGIN_SESSION("Startup", "ArgusProfile-Startup.json");
-	auto app = Argus::CreateApplication();
+	auto app = Argus::CreateApplication({ argc, argv });
 	AS_PROFILE_END_SESSION();
 	
 	AS_PROFILE_BEGIN_SESSION("Startup", "ArgusProfile-Runtime.json");

@@ -2,7 +2,7 @@ project "Argus-Editor"
 	kind "ConsoleApp"
 	language "C++"
 	cppdialect "C++17"
-	staticruntime "on"
+	staticruntime "off"
 
 	targetdir ("%{wks.location}/bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("%{wks.location}/bin-int/" .. outputdir .. "/%{prj.name}")
@@ -18,8 +18,8 @@ project "Argus-Editor"
 		"%{wks.location}/Argus/vendor/spdlog/include",
 		"%{wks.location}/Argus/src",
 		"%{wks.location}/Argus/vendor",
-		"%{IncludeDir.glm}",
 		"%{IncludeDir.entt}",
+		"%{IncludeDir.glm}",
 		"%{IncludeDir.ImGuizmo}"
 	}
 

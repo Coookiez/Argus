@@ -8,8 +8,8 @@ namespace Argus
 	class ArgusEditor : public Application
 	{
 	public:
-		ArgusEditor()
-			: Application("Argus Editor")
+		ArgusEditor(ApplicationCommandLineArgs args)
+			: Application("Argus Editor", args)
 		{
 			PushLayer(new EditorLayer());
 		}
@@ -20,8 +20,8 @@ namespace Argus
 		}
 	};
 
-	Application* CreateApplication()
+	Application* CreateApplication(ApplicationCommandLineArgs args)
 	{
-		return new ArgusEditor();
+		return new ArgusEditor(args);
 	}
 }

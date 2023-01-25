@@ -1,17 +1,9 @@
-# Directories
-.vs/
+# Binaries
 **/bin/
 !vendor/premake/bin/
 bin-int/
 
-# Files
-*.user
-packages/
-Sandbox/ArgusProfile-Runtime.json
-Sandbox/ArgusProfile-Shutdown.json
-Sandbox/ArgusProfile-Startup.json
-
-# Argus files
+# Hazel files
 *.log
 
 # Visual Studio files and folder
@@ -20,7 +12,9 @@ Sandbox/ArgusProfile-Startup.json
 **.vcxproj
 **.vcxproj.filters
 **.vcxproj.user
-**.csproj
-Argus-Editor/ArgusProfile-Runtime.json
-Argus-Editor/ArgusProfile-Shutdown.json
-Argus-Editor/ArgusProfile-Startup.json
+
+# Directories
+Argus/vendor/VulkanSDK
+Argus-Editor/assets/cache
+scripts/__pycache__
+packages/
