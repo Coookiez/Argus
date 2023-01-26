@@ -3,6 +3,7 @@
 #include "Argus.h"
 
 #include "Argus/Renderer/EditorCamera.h"
+#include "Panels/ContentBrowserPanel.h"
 #include "Panels/SceneHierarchyPanel.h"
 
 namespace Argus
@@ -58,5 +59,6 @@ namespace Argus
 
 		// Panels
 		SceneHierarchyPanel m_SceneHierarchyPanel;
+		ContentBrowserPanel m_ContentBrowserPanel;
 	};
 }
