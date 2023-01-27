@@ -8,6 +8,7 @@
 
 #include "Argus/Scene/SceneCamera.h"
 #include "Argus/Scene/ScriptableEntity.h"
+#include "Argus/Renderer/Texture.h"
 
 namespace Argus {
 
@@ -49,6 +50,8 @@ namespace Argus {
 	struct SpriteRendererComponent
 	{
 		glm::vec4 Color{ 1.0f, 1.0f, 1.0f, 1.0f };
+		Ref<Texture2D> Texture;
+		float TilingFactor = 1.0f;
 
 		SpriteRendererComponent() = default;
 		SpriteRendererComponent(const SpriteRendererComponent&) = default;
