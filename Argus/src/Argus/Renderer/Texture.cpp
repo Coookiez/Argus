@@ -18,7 +18,7 @@ namespace Argus
 		return nullptr;
 	}
 
-	Ref<Texture2D> Argus::Texture2D::Create(const std::string& path)
+	Ref<Texture2D> Texture2D::Create(const std::string& path)
 	{
 		switch (Renderer::GetAPI())
 		{
