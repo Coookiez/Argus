@@ -5,6 +5,8 @@
 #include "Argus/Core/Timestep.h"
 #include "Argus/Renderer/EditorCamera.h"
 
+class b2World;
+
 namespace Argus
 {
 	class Entity;
@@ -19,6 +21,9 @@ namespace Argus
 		Entity GetPrimaryCameraEntity();
 		void DestroyEntity(Entity entity);
 
+		void OnRuntimeStart();
+		void OnRuntimeStop();
+
 		// TEMP
 		entt::registry& Reg() { return m_Registry; }
 
@@ -32,6 +37,8 @@ namespace Argus
 
 		entt::registry m_Registry;
 		uint32_t m_ViewportWidth = 0, m_ViewportHeight = 0;
+
+		b2World* m_PhysicsWorld = nullptr;
 
 		friend class Entity;
 		friend class SceneSerializer;

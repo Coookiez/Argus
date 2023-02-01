@@ -16,3 +16,9 @@
 [submodule "Argus/vendor/ImGuizmo"]
 	path = Argus/vendor/ImGuizmo
 	url = https://github.com/thecherno/imguizmo
+[submodule "Argus/Argus/vendor/Box2D"]
+	path = Argus/Argus/vendor/Box2D
+	url = https://github.com/thecherno/box2d
+[submodule "Argus/vendor/Box2D"]
+	path = Argus/vendor/Box2D
+	url = https://github.com/thecherno/box2d

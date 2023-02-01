@@ -105,6 +105,9 @@
     <ClInclude Include="src\Argus\Core\PlatformDetection.h">
       <Filter>src\Argus\Core</Filter>
     </ClInclude>
+    <ClInclude Include="src\Argus\Core\Timer.h">
+      <Filter>src\Argus\Core</Filter>
+    </ClInclude>
     <ClInclude Include="src\Argus\Core\Timestep.h">
       <Filter>src\Argus\Core</Filter>
     </ClInclude>
@@ -171,6 +174,9 @@
     <ClInclude Include="src\Argus\Renderer\Texture.h">
       <Filter>src\Argus\Renderer</Filter>
     </ClInclude>
+    <ClInclude Include="src\Argus\Renderer\UniformBuffer.h">
+      <Filter>src\Argus\Renderer</Filter>
+    </ClInclude>
     <ClInclude Include="src\Argus\Renderer\VertexArray.h">
       <Filter>src\Argus\Renderer</Filter>
     </ClInclude>
@@ -211,6 +217,9 @@
       <Filter>src\Platform\OpenGL</Filter>
     </ClInclude>
     <ClInclude Include="src\Platform\OpenGL\OpenGLTexture.h">
+      <Filter>src\Platform\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\OpenGL\OpenGLUniformBuffer.h">
       <Filter>src\Platform\OpenGL</Filter>
     </ClInclude>
     <ClInclude Include="src\Platform\OpenGL\OpenGLVertexArray.h">
@@ -1473,9 +1482,6 @@
     <ClInclude Include="vendor\stb_image\stb_image.h">
       <Filter>vendor\stb_image</Filter>
     </ClInclude>
-    <ClInclude Include="src\Argus\Core\Timer.h" />
-    <ClInclude Include="src\Argus\Renderer\UniformBuffer.h" />
-    <ClInclude Include="src\Platform\OpenGL\OpenGLUniformBuffer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Argus\Core\Application.cpp">
@@ -1538,6 +1544,9 @@
     <ClCompile Include="src\Argus\Renderer\Texture.cpp">
       <Filter>src\Argus\Renderer</Filter>
     </ClCompile>
+    <ClCompile Include="src\Argus\Renderer\UniformBuffer.cpp">
+      <Filter>src\Argus\Renderer</Filter>
+    </ClCompile>
     <ClCompile Include="src\Argus\Renderer\VertexArray.cpp">
       <Filter>src\Argus\Renderer</Filter>
     </ClCompile>
@@ -1571,6 +1580,9 @@
     <ClCompile Include="src\Platform\OpenGL\OpenGLTexture.cpp">
       <Filter>src\Platform\OpenGL</Filter>
     </ClCompile>
+    <ClCompile Include="src\Platform\OpenGL\OpenGLUniformBuffer.cpp">
+      <Filter>src\Platform\OpenGL</Filter>
+    </ClCompile>
     <ClCompile Include="src\Platform\OpenGL\OpenGLVertexArray.cpp">
       <Filter>src\Platform\OpenGL</Filter>
     </ClCompile>
@@ -1592,7 +1604,5 @@
     <ClCompile Include="vendor\stb_image\stb_image.cpp">
       <Filter>vendor\stb_image</Filter>
     </ClCompile>
-    <ClCompile Include="src\Argus\Renderer\UniformBuffer.cpp" />
-    <ClCompile Include="src\Platform\OpenGL\OpenGLUniformBuffer.cpp" />
   </ItemGroup>
 </Project>
