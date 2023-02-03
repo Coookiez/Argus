@@ -1,16 +1,24 @@
 #pragma once
 
+#include "Argus/Core/UUID.h"
+#include "Argus/Scene/SceneCamera.h"
+#include "Argus/Renderer/Texture.h"
+
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 
 #define GLM_ENABLE_EXPERIMENTAL
 #include <glm/gtx/quaternion.hpp>
 
-#include "Argus/Scene/SceneCamera.h"
-#include "Argus/Scene/ScriptableEntity.h"
-#include "Argus/Renderer/Texture.h"
-
 namespace Argus {
+	
+	struct IDComponent
+	{
+		UUID ID;
+
+		IDComponent() = default;
+		IDComponent(const IDComponent&) = default;
+	};
 
 	struct TagComponent
 	{
@@ -70,6 +78,7 @@ namespace Argus {
 		CameraComponent(const CameraComponent&) = default;
 	};
 
+	class ScriptableEntity;
 	struct NativeScriptComponent
 	{
 		ScriptableEntity* Instance = nullptr;

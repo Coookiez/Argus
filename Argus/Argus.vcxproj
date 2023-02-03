@@ -161,6 +161,7 @@
     <ClInclude Include="src\Argus\Core\PlatformDetection.h" />
     <ClInclude Include="src\Argus\Core\Timer.h" />
     <ClInclude Include="src\Argus\Core\Timestep.h" />
+    <ClInclude Include="src\Argus\Core\UUID.h" />
     <ClInclude Include="src\Argus\Core\Window.h" />
     <ClInclude Include="src\Argus\Debug\Instrumentor.h" />
     <ClInclude Include="src\Argus\Events\ApplicationEvent.h" />
@@ -624,6 +625,7 @@
     <ClCompile Include="src\Argus\Core\Layer.cpp" />
     <ClCompile Include="src\Argus\Core\LayerStack.cpp" />
     <ClCompile Include="src\Argus\Core\Log.cpp" />
+    <ClCompile Include="src\Argus\Core\UUID.cpp" />
     <ClCompile Include="src\Argus\Core\Window.cpp" />
     <ClCompile Include="src\Argus\ImGui\ImGuiBuild.cpp" />
     <ClCompile Include="src\Argus\ImGui\ImGuiLayer.cpp" />

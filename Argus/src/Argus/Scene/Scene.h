@@ -2,6 +2,7 @@
 
 #include "entt.hpp"
 
+#include "Argus/Core/UUID.h"
 #include "Argus/Core/Timestep.h"
 #include "Argus/Renderer/EditorCamera.h"
 
@@ -17,7 +18,10 @@ namespace Argus
 		Scene();
 		~Scene();
 
+		static Ref<Scene> Copy(Ref<Scene> other);
+
 		Entity CreateEntity(const std::string& name = std::string());
+		Entity CreateEntityWithUUID(UUID uuid, const std::string& name = std::string());
 		Entity GetPrimaryCameraEntity();
 		void DestroyEntity(Entity entity);
 
@@ -30,6 +34,8 @@ namespace Argus
 		void OnUpdateRuntime(Timestep ts);
 		void OnUpdateEditor(Timestep ts, EditorCamera& camera);
 		void OnViewportResize(uint32_t width, uint32_t height);
+
+		void DuplicateEntity(Entity entity);
 
 	private:
 		template<typename T>
