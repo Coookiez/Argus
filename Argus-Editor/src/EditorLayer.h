@@ -24,6 +24,8 @@ namespace Argus
 	private:
 		bool OnKeyPressed(KeyPressedEvent& e);
 		bool OnMouseButtonPressed(MouseButtonPressedEvent& e);
+		
+		void OnOverlayRender();
 
 		void NewScene();
 		void OpenScene();
@@ -71,6 +73,8 @@ namespace Argus
 		
 		glm::vec4 m_SquareColor = { 0.2f, 0.3f, 0.8f, 1.0f };
 		int m_GizmoType = -1;
+
+		bool m_ShowPhysicsCollider = false;
 
 		enum class SceneState
 		{
